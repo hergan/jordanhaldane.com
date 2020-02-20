@@ -1,0 +1,483 @@
+<!doctype html>  
+<html lang="en-us">
+	<!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>Penelope I Documentation</title>
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<!--Fonts - changed to Source Code Pro-->
+		<link href='http://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/documenter_style.css" media="all">
+		<style>
+			html{background-color:#FFFFFF;color:#383838;}
+			::-moz-selection{background:#444444;color:#DDDDDD;}
+			::selection{background:#444444;color:#DDDDDD;}
+			#documenter_sidebar #documenter_logo{background-image:url(assets/images/logo.png);}
+			a{color:#DE6325;}
+			hr{border-top:1px solid #EBEBEB;border-bottom:1px solid #FFFFFF;}
+			#documenter_sidebar, #documenter_sidebar ol a{background-color:rgb(255, 203, 21);color:#222222;}
+			#documenter_sidebar ol a{}
+			#documenter_sidebar ol{border-top:1px solid #AAAAAA;}
+			#documenter_sidebar ol a{border:none; color:#000;}
+			#documenter_sidebar ol a:hover{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+			#documenter_sidebar ol a.current{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+			#documenter_copyright{display:block !important;visibility:visible !important;}
+		</style>
+		<script src="js/jquery.1.6.4.js"></script>
+		<script src="js/jquery.scrollTo-1.4.2-min.js"></script>
+		<script src="js/jquery.easing.js"></script>
+		<link rel="stylesheet" href="css/shDocumenter.css" media="screen">
+		<script src="js/shCore.js"></script>
+		<script src="js/shBrushCss.js"></script>
+		<script src="js/shBrushXml.js"></script>
+		<script src="js/shBrushJScript.js"></script>
+		<script src="js/shBrushPhp.js"></script>
+		<script>SyntaxHighlighter.defaults['toolbar'] = false;SyntaxHighlighter.all();</script>
+		<script>document.createElement('section');var duration=500,easing='swing';</script>
+		<script src="js/script.js"></script>
+	</head>
+	<body>
+		<div id="documenter_sidebar">
+			<a href="#documenter_cover" id="documenter_logo"></a>
+			<ol id="documenter_nav">
+				<li><a class="current" href="#documenter_cover">Introduction</a></li>
+				<li><a href="#features">Features</a></li>
+				<li><a href="#files">Start Files</a></li>
+				<li><a href="#typewriter">Typewriter Text</a></li>
+				<li><a href="#work">Work(LightBoxGallery)</a></li>
+				<li><a href="#timeline">Experience(Timeline)</a></li>
+				<li><a href="#client">Client</a></li>
+				<li><a href="#contactform">Contact Form</a></li>
+				<li><a href="#sources_credits">Sources & Credits</a></li>
+				<li><a href="#thanks">Thanks</a></li>
+			</ol>
+		</div>
+		<div id="documenter_content">
+			<section id="documenter_cover">
+				<h1>Penelope - Template</h1>
+				<h2>Available in 2 Classic Versions</h2>
+				<hr>
+				<p>By: Hencework <br/> Support: <a href="mailto:contact@hencework.com">contact@hencework.com</a></p>
+				<p>Thank you for purchasing our theme. If you have any questions that aren’t covered in this article, please mail us at <a href="mailto:contact@hencework.com">contact@hencework.com</a><br/><br/>Penelope is a Responsive CV / Resume / V-Card / Personal Website / Portfolio Template made with latest technologies Html5, Bootstrap, Sass & Angular js. Introduce yourself like a professional with this unique beautiful design. Provide every important information with awesome design components to your clients or employers.</p>
+				<p>It is highly customizable because of it's code quality & off course bootstrap Sass. It is smartly responsive that makes it look flexible & crisp on any mobile or tab device.</p>
+				
+			</section>
+			<section id="features">
+				<h3>FEATURES</h3>
+				<hr class="notop">
+				<ul class="features">
+					<li>Kenburns Image Background</li>
+					<li>Flexible Timeline</li>
+					<li>All in one LightGallery(image,Html5 video,Vimeo video, Youtube Video)</li>
+					<li>Parallax Image Background</li>
+					<li>Typewriter Text Effect</li>
+					<li>Owl Slider</li>
+					<li>Angular JS & Bootstrap SASS</li>
+					<li>CSS3 and JQuery Animations</li>					
+					<li>Working Contact Form</li>
+					<li>Google Webfonts</li>
+					<li>Fontawesome Icons</li>
+					<li>Pe-icon Icons</li>
+					<li>Responsive Layout</li>
+					<li>W3C HTML Valid code</li>
+					<li>Multi-Browser Support</li>
+					<li>Well Documented</li>
+				</ul>
+			</section>
+			
+			<section id="files">
+				<h3>Files</h3>
+				<hr class="notop">
+				<p>All site files are divided into following folders.<br><br>
+				<strong>css folder</strong> - Contains css files<br>
+				<strong>scss folder</strong> - Contains sass file<br>
+				<strong>js folder</strong> - Contains Javascript files<br>
+				<strong>img folder</strong> - Contains all images<br>
+				<strong>phpmailer folder</strong> - Contains all Contact Form related files.<br>
+				<strong>lib folder</strong> - Contains mailchimp.php file<br>
+				<strong>fonts folder</strong> - Contains "Font-Awesome" fonts plugin <br>
+				</p>
+				<p>For more details please go through 'Read Me' text file present inside root directory.</p>
+			</section>
+			
+			<section id="typewriter">
+				<h3>Typewriter Text</h3>
+				<hr class="notop">
+				<h5>The Text of the Typing Effect for Title Tag (Title keeps changing) is added directly from the below css code [ style.css ].</h5>
+				<pre class="brush: html">
+					<div class="person-img margin-bottom-xs"></div>
+						<h1>
+							Hiya!<span id="typed"></span>
+						</h1>	
+						....
+				</pre>
+				<p>js is present inside the <strong>js/init.js</strong> folder.</p>
+				<pre class="brush: html">
+					/*Typed js start*/
+					$("#typed").typed({
+						strings: ["^2100&nbsp;I Am Valerie<br/>Designer &amp; Photographer.<br/> Living In Berlin City."],
+						typeSpeed: 30,
+						backDelay: 750,
+						loop: false,
+						cursorChar: "|",
+						contentType: 'html', // or text
+						// defaults to false for infinite loop
+						loopCount: false
+					});
+					/*Typed js end*/
+				</pre>	
+				
+			</section>
+			
+			<section id="work">
+				<h3>Work(LightGallery)</h3>
+				<hr class="notop">
+				
+				<pre class="brush: html">
+					<!--Work Sec-->
+					<section id="work_sec"  class="col-lg-10 col-md-11 col-sm-11 center-div skills-wrap  sec-pad">
+						<h6>work</h6>
+					
+						<div id="portfolio-wrap" class="padding-sec-lg">
+							<ul id="portfolio" class="auto-construct  project-gallery" data-col="2">
+								<li  class="item tall"   data-src="img/mock1.jpg" data-sub-html="<h6>Bagwati</h6><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>" >
+									<a href="">
+									<img class="img-responsive" src="img/mock1.jpg"  alt="Image description" />
+									<span class="hover-cap">Bagwati</span>
+									</a>
+								</li>
+								<li class="item small" data-src="http://www.youtube.com/watch?v=Pq9yPrLWMyU" data-poster="img/mock2.jpg"  data-sub-html="<h6>Not a Keyboard</h6><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
+									<a href="">
+									<img class="img-responsive" src="img/mock2.jpg"  alt="Image description" />
+									<span class="hover-cap">Not a Keyboard</span>
+									</a>
+								</li>
+								<li class="item tall" data-src="img/mock4.jpg" data-sub-html="<h6>Into the Woods</h6><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
+									<a href="">
+									<img class="img-responsive" src="img/mock4.jpg"  alt="Image description" />
+									<span class="hover-cap">Into the Woods</span>
+									</a>
+								</li>
+								<li class="item small" data-src="http://vimeo.com/1084537" data-poster="img/mock3.jpg" data-sub-html="<h6>Ultra Saffire</h6><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
+									<a href="">
+									<img class="img-responsive" src="img/mock3.jpg"  alt="Image description" />
+									<span class="hover-cap"> Ultra Saffire</span>
+									</a>
+								</li>
+								
+								<li class="item" data-src="img/mock5.jpg" data-sub-html="<h6>Happy Puppy</h6><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
+									<a href="">
+									<img class="img-responsive" src="img/mock5.jpg"  alt="Image description" />	
+									<span class="hover-cap">Happy Puppy</span>
+									</a>
+								</li>
+								<li class="item" data-html="#video1" data-poster="img/mock6.jpg" data-sub-html="<h6>Wooden Closet</h6><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
+									<a href="">
+									<img class="img-responsive" src="img/mock6.jpg"  alt="Image description" />
+									<span class="hover-cap">Wooden Closet</span>
+									</a>
+								</li>
+								
+							</ul>
+							<!-- Hidden video div -->
+							<div style="display:none;" id="video1">
+								<video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
+									<source src="videos/video1.webm" type="video/webm">
+									 Your browser does not support HTML5 video.
+								</video>
+							</div>
+						</div>
+					</section>
+					<!--/Work Sec-->
+				</pre>	
+				<p>For images in lightbox you have to provide <b>data-src</b> for image source and for caption <b>data-sub-html</b> has to be provide</p>
+				<pre class="brush: html">
+					<li  class="item tall"   data-src="img/mock1.jpg" data-sub-html="<h6>Bagwati</h6><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>" >
+				</pre>
+				<p>Same for youtube and vimeo video in lightbox you have to provide <b>data-src</b> for video source(URL) and for caption <b>data-sub-html</b> has to be provide. In video <b>data-poster</b> is one more data element for video's poster image.</p>
+				<pre class="brush: html">
+					<li class="item small" data-src="http://www.youtube.com/watch?v=Pq9yPrLWMyU" data-poster="img/mock2.jpg"  data-sub-html="<h6>Not a Keyboard</h6><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
+				</pre>
+				<p>For Html video <b>data-html</b> data element should be present. which is id of hidden div </p>
+				<pre class="brush: html">
+					<li class="item" data-html="#video1" data-poster="img/mock6.jpg">..
+				</pre>
+				<p>Hidden div</p>
+				<pre class="brush: html">
+					<!-- Hidden video div -->
+					<div style="display:none;" id="video1">
+						<video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
+							<source src="videos/video1.webm" type="video/webm">
+							 Your browser does not support HTML5 video.
+						</video>
+					</div>
+				</pre>
+			</section>
+			
+			<section id="timeline">
+				<h3>Experience(Timeline)</h3>
+				<hr class="notop">
+				<pre class="brush: html">
+					<!--Experience Sec-->
+						<section id="exp_sec"  class="col-lg-10 col-md-11 col-sm-11 center-div experience-wrap  sec-pad">
+							<h6>experience</h6>
+							<div class="exp-timeline-wrap">
+								<div class="row exp-timeline">
+									<div class="col-xs-2">
+										<div class="timeline-st timeline-active"></div>
+									</div>
+									<div class="col-xs-10 exp-content-wrap">
+										<div class="row">
+											<div class="wow fadeInRight" data-wow-duration=".4s" data-wow-delay="0s">
+												<div class="col-sm-3 duration"><span>mar 2014 - present</span></div>
+												<div class="col-sm-9">
+													<span class="job-desn">UI/UX designer</span>
+													<span class="job-loc">Discontent Studio, New York
+	</span>
+													<p class="job-summary p-small">In this small yet expanding company, I had the opportunity to turn my passion for the web in a job right after graduation. Being the only designer in the company I have often dealt with the whole process of designing for our customers.</p>
+												</div>
+											</div>	
+										</div>
+									</div>	
+								</div>
+								<div class="row exp-timeline">
+									<div class="col-xs-2">
+										<div class="timeline-st"></div>
+									</div>
+									<div class="col-xs-10 exp-content-wrap">
+										<div class="row">
+											<div class="wow fadeInRight" data-wow-duration=".4s" data-wow-delay="0.2s">
+												<div class="col-sm-3 duration"><span>Jul 2013 — Mar 2014</span></div>
+												<div class="col-sm-9">
+													<span class="job-desn">Art Director</span>
+													<span class="job-loc">Grandmother, NYC
+	</span>
+													<p class="job-summary p-small">Being in a very well structured company, with clear and defined work procedures, helped me grow both personally and professionally, as well as enjoying a young and international working environment. I had the opportunity to redefine the way I work in a more intelligent way.</p>
+												</div>
+											</div>	
+										</div>
+									</div>	
+								</div>
+								<div class="row exp-timeline">
+									<div class="col-xs-2">
+										<div class="timeline-st"></div>
+									</div>
+									<div class="col-xs-10 exp-content-wrap">
+										<div class="row">
+											<div class="wow fadeInRight" data-wow-duration=".4s" data-wow-delay="0.4s">
+												<div class="col-sm-3 duration"><span>Jan 2013 – Jul 2013</span></div>
+												<div class="col-sm-9">
+													<span class="job-desn">Graphic Designer
+	</span>
+													<span class="job-loc">Sagmeisterwalsh, NYC
+	</span>
+													<p class="job-summary p-small">Being the first design agency in my career and being one among the best in New York, I've learned to be proficient in a fast-paced work environment.</p>
+												</div>
+											</div>	
+										</div>
+									</div>	
+								</div>
+								<div class="row exp-timeline">
+									<div class="col-xs-2">
+										<div class="timeline-st"></div>
+									</div>
+									<div class="col-xs-10 exp-content-wrap">
+										<div class="row">
+											<div class="wow fadeInRight" data-wow-duration=".4s" data-wow-delay="0.6s">
+												<div class="col-sm-3 duration"><span>Oct 2011 – Jan 2013</span></div>
+												<div class="col-sm-9">
+													<span class="job-desn">Design Assistant
+	</span>
+													<span class="job-loc">Brooklyn Ducks, California
+	</span>
+													<p class="job-summary p-small">Create frameworks to guide critical thinking, to streamline the ideation process and to visualize complex concepts. Uses various graphic approaches to make complex ideas more tangible.</p>
+												</div>
+											</div>	
+										</div>
+									</div>	
+								</div>
+							</div>
+						</section>	
+						<!--/Experience Sec-->
+				</pre>
+				<p>For new timeline please make a copy of below div</p>
+				<pre class="brush: html">
+					<div class="row exp-timeline">
+					...
+					</div>
+				</pre>	
+			</section>
+			
+			<section id="client">
+				<h3>Client</h3>
+				<hr class="notop">
+				<pre class="brush: html">
+					<!--Client Sec-->
+					<div style="background:#eee">
+						<section id="client_sec"  class="col-lg-10 col-md-11 col-sm-11 center-div client-wrap  sec-pad wow bounceIn" data-wow-duration=".4s">
+							<h6>clients</h6>
+							<div class="client-carousel">
+								<img src="img/client1.png" alt="client">
+								<img src="img/client2.png" alt="client">
+								<img src="img/client3.png" alt="client">
+								<img src="img/client4.png" alt="client">
+								<img src="img/client5.png" alt="client">
+								<img src="img/client2.png" alt="client">
+							</div>
+						</section>
+					</div>	
+					<!--/Client Sec-->
+				</pre>
+				<p>Script file present in init.js</p>
+				<pre class="brush: html">
+					/*Client carousel start*/
+					$('.client-carousel').owlCarousel({
+						loop:true,
+						margin:15,
+						nav:false,
+						dots:false,
+						responsive:{
+							0:{
+								items:1
+							},
+							200:{
+								items:2
+							},
+							400:{
+								items:3
+							},
+							600:{
+								items:4
+							},
+							1200:{
+								items:3
+							},
+							1300:{
+								items:4
+							},
+							1600:{
+								items:5
+							}
+						}
+					});
+					/*Client carousel end*/
+				</pre>	
+			</section>
+			
+			<section id="contactform">
+				<h3>Contact Form</h3>
+				<hr class="notop">
+				<h5>Contact content can be changed from the code below. Code is present inside <strong>index.html</strong> </h5>
+				<pre class="brush: html">
+					<!--Contact Sec-->
+						<section id="contact_sec"  class="col-lg-10 col-md-11 col-sm-11 center-div contact-wrap  sec-pad-top sec-pad-bottom-sm">
+							<h6>contact</h6>
+							<div data-ng-controller="ContactController" class="align-center wow fadeInUp" data-wow-duration=".4s">
+								<h3>Hey <span  data-ng-bind="formData.inputName||'There'">There</span>, happy to hear from you.</h3>
+								<div>
+									<form data-ng-submit="submit(contactform, $event)"  name="contactform"  method="post" class="row form-horizontal" role="form">
+										<div class="form-group input--hoshi col-sm-6" data-ng-class="{ 'has-error': contactform.inputName.$invalid && submitted }">
+											<div class="input-wrap">
+												<input autocomplete="off" data-ng-model="formData.inputName" type="text" class="form-control input__field input input__field--hoshi" id="inputName" name="inputName" placeholder="Name" required>
+												<label class="input__label input__label input__label--hoshi input__label--hoshi-color-1 input__label--hoshi input__label--hoshi-color-1" ></label>
+											</div>	
+										</div>
+										<div class="form-group  input--hoshi col-sm-6" data-ng-class="{ 'has-error': contactform.inputEmail.$invalid && submitted }">
+											<div class="input-wrap">
+												<input autocomplete="off" data-ng-model="formData.inputEmail" type="email" class="form-control input input__field input__field--hoshi" placeholder="Email" id="inputEmail" name="inputEmail" required>
+												<label class="input__label input__label--hoshi input__label--hoshi-color-1"></label>
+											</div>	
+										</div>
+										<div class="form-group  input--hoshi col-sm-12" data-ng-class="{ 'has-error': contactform.inputMessage.$invalid && submitted }">
+											<div class="input-wrap">
+												<textarea data-ng-model="formData.inputMessage" class="form-control input input__field input__field--hoshi" rows="4" id="inputMessage" name="inputMessage" placeholder="message" required></textarea>
+												<label class="input__label input__label--hoshi input__label--hoshi-color-1"></label>
+											</div>	
+										</div>
+										<div class="form-group col-sm-12">
+											<div class="align-center">
+												<button type="submit" class="btn btn-default" data-ng-disabled="submitButtonDisabled">
+												<span class="mask"></span>
+												<span>send message</span>
+												</button>
+											</div>
+										</div>
+									</form>
+									<p data-ng-class="result">{{ resultMessage }}</p>
+								</div>
+							</div>
+							
+							<div class="email-direct">
+								<p class="wow fadeInRight" data-wow-duration=".4s">Or simply email me at <a href="mailto:hiya@Penelope.com">hiya@Penelope.com</a></p>
+							</div>
+						</section>
+						<!--Contact Sec-->
+				</pre>
+				<p>php code is present inside the <strong>contact-form.php</strong> file</p>				
+				<pre class="brush: html">
+					//create an instance of PHPMailer
+					$mail = new PHPMailer();
+
+					$mail->From = $_POST['inputEmail'];
+					$mail->FromName = $_POST['inputName'];
+					$mail->AddAddress('hencework@gmail.com'); //recipient 
+					$mail->Subject = 'Enquiry from hencework';
+					$mail->Body = "Name: " . $_POST['inputName'] . "\r\n\r\nMessage: " . stripslashes($_POST['inputMessage']);
+
+				</pre>
+			</section>
+
+			
+	
+			<section id="sources_credits">
+				<h3>Sources & Credits</h3>
+				<hr class="notop">
+				<p>
+					<strong>Twitter Bootstrap framework</strong><br>
+					http://getbootstrap.com/<br>
+				</p>
+				<p>
+					<strong>Fonts</strong><br>
+					http://www.google.com/fonts<br>
+				</p>
+				<p>
+				<p>
+					<strong>Icons</strong><br>
+					Font-Awesome<br>
+					http://fortawesome.github.io/Font-Awesome/<br>
+					Pe-icon-7-stroke<br>
+					http://themes-pixeden.com/font-demos/7-stroke/
+				</p>
+				
+				<p>
+					<strong>LightGallery</strong><br>
+					http://sachinchoolur.github.io/lightGallery/
+				</p>
+				
+				<p>
+					<strong>JQuery</strong><br>
+					http://jquery.com
+				</p>
+		
+				<p>
+					<strong>Mailchimp</strong><br>
+					http://mailchimp.com/
+				</p>
+				<p>
+					<strong>Images</strong><br>
+					https://unsplash.com/<br>
+					http://www.pexels.com/<br>
+				</p>
+			</section>
+			<section id="thanks">
+				<h3>Thanks</h3>
+				<hr class="notop">
+				<P>Once again, thank you so much for purchasing this theme.<br/></br>If you have any questions that aren’t covered in this article, please feel free to contact us at <a href="mailto:hencework@gmail.com">hencework@gmail.com</a><br/></br> Don’t forget to rate this template, it helps us improve our products.</P>
+				
+			</section>
+			
+		</div>
+	</body>
+</html>
+

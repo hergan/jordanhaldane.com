@@ -1,0 +1,26 @@
+{
+  "name": "jordanhaldane",
+  "version": "1.0.0",
+  "description": "packages for my personal website dev",
+  "main": "gulpfile.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jordan Haldane",
+  "license": "ISC",
+  "dependencies": {
+    "cssnano": "^4.1.10",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.1.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "node-sass": "^4.13.0"
+  }
+}
