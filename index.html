@@ -1,195 +1,355 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-
+<html lang="en">
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158800676-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-
-		gtag('config', 'UA-158800676-1');
-	</script>
-	<meta charset="UTF-8" />
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<title>Jordan Haldane</title>
-	<meta name="description" content="jordanhaldane.com - Personal Website / Resume" />
-	<meta name="keywords"
-		content="jordan haldane, jordanhaldane, resume, graphic design,web design,ui,kansas city, kansas, missouri, KCMO" />
-	<meta name="author" content="Haldane" />
 
-	<!--Favicon-->
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-	<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
-	<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
-	<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
-	<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
-	<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
-	<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
-	<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
-
-	<!--Fonts-->
-	<link href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Hind:400,500,300,600' rel='stylesheet'
-		type='text/css'>
-
-	<!--CSS-->
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
+<body>
+	<div class="frame top"></div>
+	<div class="frame right"></div>
+	<div class="frame bottom"></div>
+	<div class="frame left"></div>
 
-<body id="body" data-ng-app="contactApp">
-
-	<!--Fixed Bg Image-->
-	<div class="fixed-bg"></div>
-	<div class="fixed-bg-overlay"></div>
-	<!--/Fixed Bg Image-->
-
-	<!--Preloader-->
-	<div id="pre_load" class="preloader-it">
-		<div id="la_anim" class="la-anim-1"></div>
-	</div>
-	<!--/Preloader-->
-
-	<!--Container-->
-	<div class="container-fluid">
-		<div class="row">
-			<div id="vertical_nav_wrap" class="col-lg-4 col-xs-12 pad-zero vertical-nav-wrap">
+	<header>
+		<img src="./img/logo-bg-shape2.svg" alt="" class="logo-bg-shape ">
+		<img src="./img/jh_logo_blue-white.svg" alt="Jordan Haldane Logo" class="logo">
+		<nav class="">
+			<ul>
+				<li><a href="#about">About</a></li>
+				<li><a href="#grid">Grid</a></li>
+				<li><a href="#capabilities">Capabilities</a></li><!--FIX: breaks onto two lines on mobile -->
+				<li><a href="#tools">Tools & Skills</a></li><!--FIX: breaks onto two lines on mobile -->
+				<li><a href="#contact">Say Hi</a></li>
+			</ul>
+			<div class="btn-wrapper">
+				<a href="#" class="btn btn-primary btn-outline">download resume</a>
 			</div>
-			<div class="col-lg-8 col-xs-12 pad-zero">
+			<img src="./img/tab.svg" alt="nav tab" class="pull-tab">
+		</nav>
+	</header>
+	<div class="before-the-fold-shadow"></div>
+	<main class="main-content">
 
-				<!--Header-->
-				<header>
-					<div class="header-wrap col-lg-10 center-div">
-						<div class="float-left name">
-							<a data-scroll href="#body">
-								<span>
-									Jordan Haldane
-								</span>
-							</a>
+		<section class="intro-sec" id="about">
+			<!-- <p class="small overline">Hi, my name is</p> -->
+			<h1 class="first-name">Hi, I'm Jordan <span class="last-name">Haldane<span class="blue">.</span></span></h1>
+			<!-- <h1 class="last-name"></h1> -->
+			<p class="small">UI design & developer</p>
+			<!-- TODO:re-write about me section  -->
+			<p class="about-me">I help users and businesses reach their goals by designing & building meaningful print and digital products.</p>
+			<!-- <p>With a passion for <span class="skill">print</span> and <span class="skill">UI design</span>, I've gained <span class="exp">more than 7 years</span> of creating pixel perfect designs and smooth experiences.</p> -->
+			<div class="cta">
+				<a href="#" class="btn btn-primary btn--gradient">See my work</a>
+				<a href="#" class="btn btn-secondary btn--transparent">Download My Resume</a>
+			</div>
+		</section>
+
+		<section class="what-i-do-sec">
+			<h2>what i do</h2>
+			<!-- TODO: Port layout out of bootstrap? -->
+				<div class="row">
+					<div class="design col-xs-6">
+							<div class="icon"></div>
+							<p>design</p>
+					</div>
+					<div class="develope col-xs-6">
+						<div class="icon"></div>
+						<p>develop</p>
+					</div>
+				<!-- <div class="photography col-sm-3">
+					<div class="icon"></div>
+					<p>photography</p>
+				</div> -->
+			</div>
+		</section>
+
+		<section class="grid-sec" id="grid">
+			<div class="h2-wrap margin-bottom--none">
+				<h2 class="sec__title p-rule--1-1">grid</h2>
+			</div>
+			<!-- TODO: NEED TO REWRITE -->
+			<p class="sec__desc">Need to rewrite! Prototypes, Digital Products (Apps, Websites, SaaS solutions) and design systems which are visually pleasing, user-centric and easy to use.</p>
+			<div class="gallery">
+				<a href="#" class="project">
+						<div class="project__info">
+							<p class="project__client">cmpkc</p>
+							<h2 class="project__title">Store Locator Webapp</h2>
 						</div>
-						<div class="float-right social-download-wrap">
-							<a href="./pdf/00jbh_design-resume_20200122_v1.2.pdf" target="_blank" class="btn btn-default float-left">
-								<span class="mask"></span>
-								<span class="btn-label">
-									<b>download resume</b>
-									<span class="icon pe-7s-download"></span>
-								</span>
-							</a>
+						<div class="image"></div>
+				</a>
+				<a href="#" class="project project--square">
+						<div class="project__info">
+							<p class="project__client">Freelance</p>
+							<h2 class="project__title">Branding</h2>
+						</div>
+						<div class="image"></div>
+				</a>
+				<a href="#" class="project">
+						<div class="project__info project__info--bottom">
+							<h2 class="project__title ">Pumello</h2>
+						</div>
+						<div class="image"></div>
+				</a>
+				<a href="#" class="project">
+						<div class="project__info">
+							<p class="project__client">cmpkc</p>
+							<h2 class="project__title">B2B Marketing Website</h2>
+						</div>
+						<div class="image"></div>
+				</div>
+				</a>
+		</section>
+		<section class="capabilities-sec" id="capabilities">
+		<div class="h2-wrap mb-5">
+				<h2 class="p-rule--3-1">Capabilities</h2>
+			</div>
+			<div class="skill__cards">
+				<div class="skill__card">
+					<div class="skill__icon">
+						<i>🎨</i>
+						<h3 class="skill__title">
+							Product Design
+						</h3>
+					</div>
+					<div class="skill__list">
+							<ul>
+								<li>User Interface Design</li>
+								<li>Visual Design</li>
+								<li>Visual Identities</li>
+								<li>Design Systems</li>
+								<li>Responsive Websites</li>
+								<li>Brand Guidelines</li>
+							</ul>
+					</div>
+				</div>
+				<div class="skill__card">
+					<div class="skill__icon">
+						<i>👨🏻‍💻</i>
+						<h3 class="skill__title">
+							Development
+						</h3>
+					</div>
+					<div class="skill__list">
+							<ul>
+								<li>Front-end Development</li>
+								<li>Responsive Websites</li>
+								<li>Content Management Systems</li>
+							</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="tools-skills-sec" id="tools">
+			<div class="tools-sec">
+				<div class="h2-wrap">
+					<h2 class="p-rule--5-1">tools &amp; skills</h2>
+				</div>
+				<div class="tool">
+					<h4 class="contrast">indesign</h4>
+					<div class="progress-bar-graph">
+						<div class="progress-bar-graph-wrap">
+							<span style="width: 100%;">
+									<strong><i>100</i>%</strong>
+							</span>
 						</div>
 					</div>
-					<div class="clearfix"></div>
-				</header>
-				<!--/Header-->
-
-				<!--Main Content-->
-				<div id="main_content" class="content-block margin-top-150 margin-top-sm-70 margin-top-xs-50">
-
-					<!--Introduction Sec-->
-					<section id="intro_content_sec" class="col-lg-10 col-md-11 col-sm-11 center-div intro-content-wrap sec-pad">
-						<div class="logo margin-bottom-xs"></div>
-						<?xml version="1.0" standalone="no"?>
-						<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-						<svg width="" height="" version="1.1" xmlns="http://www.w3.org/2000/svg"
-							xmlns:xlink="http://www.w3.org/1999/xlink">
-							<image href="./img/jh_logo_blue-white.svg" x="0" y="0" height="130px" width="130px" />
-						</svg>
-						<h1>
-							Hello!<span id="typed"></span>
-						</h1>
-						<h6>
-							about
-						</h6>
-						<p class="pad-bottom-35 wow fadeInUp" data-wow-duration=".6s">
-							I am a problem solver and creative person by heart. Not only does my passion for visual communication pour
-							into making the results look great, the solutions are well thought out and aim to solve the questions of
-							the client's product. I consider myself to be reliable hard working person who is always looking for my
-							next challenge. I have worked in an agency for more than four years and as an digital project manager and
-							in-house designer utilizing the skills I have learned from building print collateral to animating digital
-							display banners. I enjoy bringing clarity to complex problems with a people first approach.
-						</p>
-						<p class="wow fadeInUp" data-wow-duration=".4s">
-							You can find my graphic work on <a class="goto-social" href="https://www.behance.net/jordanhaldane"
-								target="_blank">Behance</a>, peruse my repositories on <a class="goto-social"
-								href="https://github.com/hergan" target="_blank">GitHub</a>, or see my photography skills on <a
-								href="https://www.instagram.com/hergan/" class="goto-social" target="_blank">Instagram</a>.
-						</p>
-						<div class="margin-top-sm wow fadeInUp" data-wow-duration=".4s">
-							<img class="img-responsive signature" src="img/jh_signature_rgb_color_light-blue.png" alt="signature" />
-						</div>
-					</section>
-					<!--/Introduction Sec-->
-
-					<!--Portfolio Sec-->
-					<div class="portfolio-wrap"></div>
-					<!--/Portfolio Sec-->
-
-					<!--Footer-->
-					<footer class="col-lg-10 col-md-11 col-sm-11 center-div contact-wrap  sec-pad">
-						<div class="row">
-							<div class="col-sm-6 available-wrap">
-								<span class="available-pointer"></span>
-								<a href="mailto:haldajo@gmail.com">
-									<span class="available-tag"> Available for Freelance Projects.</span>
-								</a>
-							</div>
-							<div class="col-sm-6">
-								<div class="social-icons-wrap float-right">
-
-									<!--Social Icons-->
-									<ul class="social-icons float-right">
-										<li>
-											<!-- Twitter -->
-											<a href="#" class="social-icon">
-												<span class="fa" data-hover="&#xf099;">&#xf099;</span>
-											</a>
-										</li>
-										<li>
-											<!-- Insta -->
-											<a href="#" class="social-icon">
-												<span class="fa" data-hover="&#xf16d;">&#xf16d;</span>
-											</a>
-										</li>
-									</ul>
-									<!--/Social Icons-->
-
-								</div>
-								<div class="copywrite-wrap text-right float-right">
-									<p class="copywrite">Fabricated by <b>Jordan Haldane &copy; 2020.</b>.</b></p>
-								</div>
-							</div>
-						</div>
-					</footer>`
-					<!--/Footer-->
-
 				</div>
-				<!--/Main Content-->
-
+				<div class="tool">
+					<h4 class="contrast">illustrator</h4>
+					<div class="progress-bar-graph">
+						<div class="progress-bar-graph-wrap">
+							<span style="width: 95%;">
+								<strong><i>95</i>%</strong>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="tool">
+					<h4 class="contrast">photoshop</h4>
+					<div class="progress-bar-graph">
+						<div class="progress-bar-graph-wrap">
+							<span style="width: 85%;">
+								<strong><i>85</i>%</strong>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="tool">
+					<h4 class="contrast">sketch</h4>
+					<div class="progress-bar-graph">
+						<div class="progress-bar-graph-wrap">
+							<span style="width: 80%;">
+								<strong><i>80</i>%</strong>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="tool">
+					<h4 class="contrast">html</h4>
+					<div class="progress-bar-graph">
+						<div class="progress-bar-graph-wrap">
+							<span style="width: 75%;">
+								<strong><i>75</i>%</strong>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="tool">
+					<h4 class="contrast">css</h4>
+					<div class="progress-bar-graph">
+						<div class="progress-bar-graph-wrap">
+							<span style="width: 75%;">
+								<strong><i>75</i>%</strong>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="tool">
+					<h4 class="contrast">javascript</h4>
+					<div class="progress-bar-graph">
+						<div class="progress-bar-graph-wrap">
+							<span style="width: 55%;">
+								<strong><i>55</i>%</strong>
+							</span>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
-	</div>
-	<!-- /Container -->
+			<div class="skills">
+				<img src="./img/skills-graph.svg" alt="skills graph" class="skills-graph">
+				</div>
+			</div>
+		</section>
 
-	<!-- Scripts -->
+		<section class="education-sec">
+			<div class="h2-wrap">
+				<h2 class="p-rule--3-1">education</h2>
+			</div>
+			<p class="small">Small sentence about my education experience. Learning is a non-stop process.</p>
+			<div class="school-wrap">
+				<h4 class="contrast">2012-2015</h4>
+				<h5>Bachelor of Science (B.S.), Graphic Communications- Graphic Design and Minor in Commercial Arts</h5>
+				<p>Pittsburg State University</p>
+			</div>
+			<hr>
+			<div class="school-wrap">
+				<h4 class="contrast">2010-2012</h4>
+				<h5>Associate of Arts and Sciences (A.A.S.), Visual Communications- Graphic
+Design Technologies</h5>
+				<p>Oklahoma State University Institute of Technology- Okmulgee</p>
+			</div>
+			<hr>
+			<div class="school-wrap">
+				<h4 class="contrast">2006 - 2009</h4>
+				<p>Thomas Edison Preparatory High School</p>
+			</div>
+		</section>
+
+		<section class="experience-sec">
+			<h2>experience</h2>
+			<div class="exp-wrap">
+				<div class="exp">
+					<div class="exp-tml-wrap">
+						<div class="exp-tml"></div>
+					</div>
+					<div class="exp-content">
+						<div class="exp-vl"></div>
+						<!-- <span class="exp-length">5</span> -->
+						<h4 class="contrast">aug 2015 - jan 2020</h4>
+						<h1>Digital Project Manager / Graphic Designer</h1>
+						<p>Creative Marketing Programs</p>
+						<p class="small">Responsible for initiating, planning, executing, managing and implementing projects with a digital component of all shapes and sizes. Primarily focusing in graphic design, front-end development, and digital marketing.</p>
+					</div>
+				</div>
+				<div class="exp">
+					<div class="exp-tml-wrap">
+						<div class="exp-tml"></div>
+					</div>
+					<div class="exp-content">
+						<div class="exp-vl"></div>
+						<!-- <span class="exp-length">2</span> -->
+						<h4 class="contrast">jun 2013 - may 2015</h4>
+						<h1>Freelance Graphic Designer</h1>
+						<p>Schuber Mitchell Homes</p>
+						<p class="small">Created direct mail postcards, fliers, and other marketing materials. Helped organized brand identity assets to promote keeping a consistent identity. Completed pre-press processes for printed materials. Maintained and uploaded copy and graphic assets used for the company's website content management system.</p>
+					</div>
+				</div>
+				<div class="exp">
+					<div class="exp-tml-wrap">
+						<div class="exp-tml"></div>
+					</div>
+					<div class="exp-content">
+						<div class="exp-vl"></div>
+						<!-- <span class="exp-length">.25</span> -->
+						<h4 class="contrast">jun 2011 - aug 2011</h4>
+						<h1>Graphic Design Intern</h1>
+						<p>WALSH Branding</p>
+						<p class="small">Worked in collaboration with in-house designers and art directors to create brand strategies and creative briefs. Completed pre-press file tasks to help meet deadlines for print production creative.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="contact-sec" id="contact">
+			<div class="h2-wrap">
+				<h2 class="p-rule--1-1">say hello</h2>
+			</div>
+			<form action="">
+				<div class="input-wrap">
+					<input type="text" id="name" name="name" class="input-control">
+					<label for="name" class="input-label">name</label>
+				</div>
+				<div class="input-wrap">
+					<input type="text" id="email" name="email" class="input-control">
+					<label for="email" class="input-label">email</label>
+				</div>
+				<div class="input-wrap">
+					<textarea type="text" id="message" name="message" class="input-control"></textarea>
+					<label for="message" class="input-label">message</label>
+				</div>
+				<button type="submit" class="btn btn-primary btn--outline" value="SEND MESSAGE">send message</button>
+				<p class="small">Or, simply email me at <a href="#">haldajo@gmail.com</a></p>
+			</form>
+		</section>
+
+	</main>
+	<div class="gradient-bg"></div>
+	<footer>
+		<div class="freelance-status">
+			<div class="status-pointer"></div>
+			<p class="status-tag small"> Available for Freelance Projects</p>
+		</div>
+		<div class="social">
+			<ul class="social__icons">
+				<li>
+					<a href="#" target="_blank" class="social-icon--behance"></a>
+				</li>
+				<li>
+					<a href="#" target="_blank" class="social-icon--github"></a>
+				</li>
+				<li>
+					<a href="#" target="_blank" class="social-icon--instagram"></a>
+				</li>
+				<li>
+						<a href="#" target="_blank" class="social-icon--twitter"></a>
+				</li>
+			</ul>
+		</div>
+		<div class="goto-top">
+			<a href="#body">top</a>
+		</div>
+		<div class="copyright-wrap">
+			<p class="copyright">
+				Handcrafted by <span>Jordan Haldane</span> 2020.
+			</p>
+		</div>
+	</footer>
 	<script src="js/jquery-1.12.4.min.js"></script>
-	<script src="js/angular.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/modernizr.custom.js"></script>
-	<script src="js/app.js"></script>
-	<script src="js/controllers.js"></script>
-	<script src="js/jquery.placeholder.js"></script>
-	<script src="js/smooth-scroll.js"></script>
-	<script src="js/countTo.js"></script>
-	<script src="js/jQuery.appear.js"></script>
-	<script src="js/isotope.js"></script>
-	<script src="js/typed.js"></script>
-	<script src="js/lightgallery-all.js"></script>
-	<script src="js/jquery.mousewheel.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/froogaloop2.min.js"></script>
-	<script src="js/wow.min.js"></script>
 	<script src="js/init.js"></script>
 </body>
-
 </html>

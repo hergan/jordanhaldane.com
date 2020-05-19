@@ -21,6 +21,9 @@
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-postcss": "^8.0.0",
-    "node-sass": "^4.13.0"
+    "node-sass": "^4.13.0",
+    "stylelint": "^13.4.1",
+    "stylelint-config-standard": "^20.0.0",
+    "superlatief-mediaqueries": "*"
   }
 }

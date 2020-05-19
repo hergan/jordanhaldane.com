@@ -1,0 +1,28 @@
+// Vertical Mediaqueries
+.aboveHeight(@min, @type: @screen, @ruleset: default) {
+  & when (isruleset(@type)) {
+    .bp(@min, min-height, @screen, {
+      @type();
+    })
+  }
+
+  & when (isstring(@type)) {
+    .bp(@min, min-height, @type, {
+      @ruleset();
+    })
+  }
+}
+
+.belowHeight(@min, @type: @screen, @ruleset: default) {
+  & when (isruleset(@type)) {
+    .bp(@min, max-height, @screen, {
+      @type();
+    })
+  }
+
+  & when (isstring(@type)) {
+    .bp(@min, max-height, @type, {
+      @ruleset();
+    })
+  }
+}
