@@ -145,8 +145,21 @@ nav{
 	0%,100%{
 		opacity:1;
 	}
-	50%{
+	75%{
 		opacity:0;
+	}
+}
+@keyframes fold{
+	0%{
+		transform: translateY(0%);
+		opacity: 1;
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+		transform: translateY(100%);
+		opacity: 0;
 	}
 }
 
@@ -353,18 +366,23 @@ header{
 	}
 }
 .before-the-fold-shadow{
-	display: none;
-	// display:block;
+	// display: none;
+	display:block;
 	z-index: 99;
 	width:100vw;
-	height:50vh;
+	height:60vh;
 	position: absolute;
 	bottom:-10px;
 	opacity: 0.8;
 	background-blend-mode: multiply;
 	background-image: linear-gradient(180deg, rgba(12,13,39,0.00) 0%, #0C0D27 84%);
 	@include below($xsmall){
-		height: 20vh;
+		display: none;
+	}
+	&.disappear{
+		animation-name:fold;
+		animation-duration: .5s;
+		opacity: 0;
 	}
 }
 .gradient-bg{
@@ -401,7 +419,7 @@ main{
 			}
 		/********Intro Sec CSS********/
 		&.intro-sec{
-			padding-top: 5rem;
+			padding-top: 1.4rem;
 			line-height: 1;
 			padding-bottom: 6rem;
 			@include below($xsmall){
@@ -544,6 +562,9 @@ main{
 							height: 75vw;
 						}
 					}
+					&.project--blue{
+						background: #4DC0E6;
+					}
 				}
 			}
 		}
@@ -582,64 +603,85 @@ main{
 		}
 		&.tools-skills-sec{
 			// background-color: $grey-5;
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			@include below($xsmall){
-				margin: inherit;
-				grid-template-columns: 100%;
-			}
-			.tools-sec{
-				.tool{
-					margin-bottom: 20px;
-					@include below($medium){
-						margin-bottom: 40px;
-					}
-					h4{
-						padding-bottom: 10px;
-					}
-					.progress-bar-graph{
-						.progress-bar-graph-wrap{
-							position: relative;
-							float: left;
-							width: 100%;
-							span{
-								background-color: $accent-1-1;
-								height: 3px;
-								width: 0px;
-								display: block;
-								float: left;
-								position: relative;
-								overflow: visible !important;
-								&::after{
-									content: "";
-									border: 3px solid $accent-1-1;
-									border-radius: 50%;
-									height: 15px;
-									position: absolute;
-									right: 0px;
-									background: $accent-4-5;
-									top: -6px;
-									width: 15px;
+			.tools-skills{
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				@include below($xsmall){
+					margin: inherit;
+					grid-template-columns: 100%;
+				}
+				.tools-sec{
+					.tool-list{
+						// display: grid;
+						// grid-gap: 3rem;
+						// grid-template-columns: 1fr 1fr;
+						// grid-template-rows: 1fr;
+						.tool{
+							@include below($medium){
+								margin-bottom: 40px;
+							}
+							@include above($medium){
+								// margin-bottom: 50px;
+							}
+							h4{
+								@include above($medium){
+									// padding-bottom: 10px;
 								}
-								strong{
-									display: block;
+								padding-bottom: 10px;
+							}
+							.progress-bar-graph{
+								.progress-bar-wrap{
+									position: relative;
 									float: left;
-									position: absolute;
-									right: 0;
-									top: -30px;
-									color: $grey-1;
-								}
+									width: 100%;
+									.bar-wrap{
+										position: relative;
+										float: left;
+										width: 100%;
+										span{
+											background-color: $accent-1-1;
+											height: 3px;
+											width: 0px;
+											display: block;
+											float: left;
+											position: relative;
+											overflow: visible !important;
+											margin-bottom: 40px;
+											&::after{
+												content: "";
+												border: 3px solid $accent-1-1;
+												border-radius: 50%;
+												height: 15px;
+												position: absolute;
+												right: 0px;
+												background: $accent-4-5;
+												top: -6px;
+												width: 15px;
+											}
+											strong{
+												display: block;
+												float: left;
+												position: absolute;
+												right: 0;
+												top: -35px;
+												color: $grey-1;
+											}
+										}
+									}
+									}
 							}
 						}
 					}
 				}
-			}
-			.skills{
-				margin-bottom: 40px;
-				display: flex;
-				justify-content: center;
-				img{
-					width: 100%;
+				.skills-sec{
+					@include below(xsmall){
+						margin-bottom: 40px;
+					}
+					display: flex;
+					justify-content: center;
+					img{
+						width: 100%;
+					}
 				}
 			}
 		}
@@ -736,6 +778,9 @@ main{
 			}
 		}
 		&.contact-sec{
+			form{
+				display: none;
+			}
 			@include above($medium){
 				margin-bottom: 50px;
 			}
