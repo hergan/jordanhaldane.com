@@ -2,3 +2,5 @@ node_modules
 todo.todo
 package-lock.json
 .DS_Store
+.vscode/settings.json
+.vscode/launch.json

@@ -1,0 +1,28 @@
+// Horizontal Mediaqueries
+.above(@min, @type: @screen, @ruleset: default) {
+  & when (isruleset(@type)) {
+    .bp(@min, min-width, @screen, {
+      @type();
+    })
+  }
+
+  & when (isstring(@type)) {
+    .bp(@min, min-width, @type, {
+      @ruleset();
+    })
+  }
+}
+
+.below(@min, @type: @screen, @ruleset: default) {
+  & when (isruleset(@type)) {
+    .bp(@min, max-width, @screen, {
+      @type();
+    })
+  }
+
+  & when (isstring(@type)) {
+    .bp(@min, max-width, @type, {
+      @ruleset();
+    })
+  }
+}

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="381px" height="312px" viewBox="0 0 381 312" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Skills graph</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Skills-graph" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="skills-graph">
+            <g id="axis" opacity="0.595672" transform="translate(91.000000, 34.322578)" stroke="#5C9DD5" stroke-width="0.5">
+                <ellipse id="circle-axis-4" cx="118.5" cy="117.672414" rx="30.3076946" ry="28.9137931"></ellipse>
+                <ellipse id="circle-axis-3" cx="117.826496" cy="117" rx="52.5333373" ry="51.1034483"></ellipse>
+                <ellipse id="circle-axis-2" cx="119.173504" cy="117.672414" rx="74.0854756" ry="73.2931034"></ellipse>
+                <ellipse id="circle-axis-1" cx="117.826496" cy="117.672414" rx="117.189752" ry="116.327586"></ellipse>
+                <line x1="201.341032" y1="200.37931" x2="35.6589682" y2="34.9655172" id="axis-4" stroke-linecap="square"></line>
+                <line x1="201.341032" y1="34.9655172" x2="35.6589682" y2="200.37931" id="axis-3" stroke-linecap="square"></line>
+                <line x1="118.500024" y1="235.535646" x2="118.500024" y2="-0.190818464" id="axis-2" stroke-linecap="square" transform="translate(118.500024, 117.672414) rotate(-90.000000) translate(-118.500024, -117.672414) "></line>
+                <line x1="118.5" y1="233.553435" x2="118.5" y2="0.446564885" id="axis-1" stroke-linecap="square"></line>
+            </g>
+            <g id="skill-bullets" transform="translate(86.000000, 27.322578)" fill="#E62237">
+                <ellipse id="bullet-8" cx="40.5334882" cy="39.7115385" rx="6.05805328" ry="6.05769231"></ellipse>
+                <ellipse id="bullet-7" transform="translate(6.877656, 121.826923) rotate(-90.000000) translate(-6.877656, -121.826923) " cx="6.87765632" cy="121.826923" rx="6.05769231" ry="6.05803352"></ellipse>
+                <ellipse id="bullet-6" transform="translate(40.533488, 205.288462) rotate(-180.000000) translate(-40.533488, -205.288462) " cx="40.5334882" cy="205.288462" rx="6.05805328" ry="6.05769231"></ellipse>
+                <ellipse id="bullet-5" transform="translate(124.000000, 238.942308) rotate(-180.000000) translate(-124.000000, -238.942308) " cx="124" cy="238.942308" rx="6.05805328" ry="6.05769231"></ellipse>
+                <ellipse id="bullet-4" transform="translate(207.466512, 205.288462) rotate(-180.000000) translate(-207.466512, -205.288462) " cx="207.466512" cy="205.288462" rx="6.05805328" ry="6.05769231"></ellipse>
+                <ellipse id="bullet-3" transform="translate(241.122363, 123.173077) rotate(-270.000000) translate(-241.122363, -123.173077) " cx="241.122363" cy="123.173077" rx="6.05769231" ry="6.05805328"></ellipse>
+                <ellipse id="bullet-2" cx="207.466512" cy="39.7115385" rx="6.05805328" ry="6.05769231"></ellipse>
+                <ellipse id="bullet-1" transform="translate(124.000000, 6.057692) rotate(-360.000000) translate(-124.000000, -6.057692) " cx="124" cy="6.05769231" rx="6.05805328" ry="6.05769231"></ellipse>
+            </g>
+            <path d="M200.076959,57.6712371 C204.456207,55.6141154 207.275212,60.5879653 230.557645,68.4710281 C257.265154,77.5168118 257.793523,76.357175 261.774941,79.6726259 C274.23513,90.0538424 267.475112,100.117392 279.919761,120.54057 C292.196574,140.680007 305.570531,142.052449 304.967569,153.426759 C304.516901,161.960575 296.927033,162.324504 282.661064,181.313556 C268.457257,200.225505 271.139508,201.573274 263.941254,206.597339 C250.759997,215.800414 241.420294,207.408468 200.076959,207.488656 C177.475189,207.534918 162.631123,210.076249 159.619418,203.420674 C158.202146,200.290272 160.648184,197.856885 162.565854,191.45421 C166.401192,178.62727 161.450062,172.085808 158.988483,153.426759 C156.691631,136.013702 155.050579,123.569196 161.798164,113.120128 C168.200756,103.207701 174.985638,106.868576 183.753458,95.8674471 C196.428103,79.9656193 189.957134,62.4208133 200.076959,57.6712371 Z" id="graph" stroke="#E52237" stroke-width="7"></path>
+            <g id="Labels" transform="translate(0.000000, 0.322578)" fill="#E5E5E5" font-family="FiraSans-Bold, Fira Sans" font-size="11" font-weight="bold">
+                <g id="Prepress" transform="translate(186.381156, 282.187333)" line-spacing="28">
+                    <text id="PREPRESS">
+                        <tspan x="0" y="13">PREPRESS</tspan>
+                    </text>
+                </g>
+                <g id="FE" transform="translate(0.000000, 144.374915)" line-spacing="13">
+                    <text id="FRONT-END-DEV.">
+                        <tspan x="11.4288641" y="9.89906311">FRONT-END </tspan>
+                        <tspan x="47.2668641" y="22.8990631">DEV.</tspan>
+                    </text>
+                </g>
+                <g id="FE-Copy" transform="translate(47.766025, 45.937473)" line-spacing="13">
+                    <text id="Illustration">
+                        <tspan x="0" y="13">ILLUSTRATION</tspan>
+                    </text>
+                </g>
+                <g id="Typography" transform="translate(303.391335, 234.312361)" line-spacing="28">
+                    <text id="TYPOGRAPHY">
+                        <tspan x="0.608664543" y="13.687639">TYPOGRAPHY</tspan>
+                    </text>
+                </g>
+                <g id="Logo" transform="translate(342.791473, 136.874919)" line-spacing="28">
+                    <text id="LOGO">
+                        <tspan x="0.208526839" y="13.1250809">LOGO</tspan>
+                    </text>
+                </g>
+                <g id="FED" transform="translate(65.561211, 239.062359)" line-spacing="13">
+                    <text id="UI-DESIGN">
+                        <tspan x="0" y="13">UI DESIGN</tspan>
+                    </text>
+                </g>
+                <g id="Idenity" transform="translate(298.771803, 37.437477)" line-spacing="28">
+                    <text id="IDENITY-Copy">
+                        <tspan x="0.22819689" y="13.5625227">IDENITY</tspan>
+                    </text>
+                </g>
+                <g id="Layout" transform="translate(190.064100, 0.000000)" line-spacing="28">
+                    <text id="LAYOUT-Copy">
+                        <tspan x="0.935900205" y="13">LAYOUT</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

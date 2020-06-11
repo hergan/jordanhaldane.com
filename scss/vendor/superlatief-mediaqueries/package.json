@@ -1,0 +1,57 @@
+{
+  "_from": "superlatief-mediaqueries@*",
+  "_id": "superlatief-mediaqueries@0.0.8",
+  "_inBundle": false,
+  "_integrity": "sha512-QbXUjuJ8gWf+N8Fnsn3xhVBGwg0DlG+zZp6YFoW3NuZoTSY3v9jmXLxKTgIUJxM37D4cZoWzMQZ/IkTJSL631A==",
+  "_location": "/superlatief-mediaqueries",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "superlatief-mediaqueries@*",
+    "name": "superlatief-mediaqueries",
+    "escapedName": "superlatief-mediaqueries",
+    "rawSpec": "*",
+    "saveSpec": null,
+    "fetchSpec": "*"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/superlatief-mediaqueries/-/superlatief-mediaqueries-0.0.8.tgz",
+  "_shasum": "05cf3591fc0cd8beded607299453be8411b0f7e5",
+  "_spec": "superlatief-mediaqueries@*",
+  "_where": "/Users/jordanhaldane/code/jordanhaldane",
+  "author": {
+    "name": "Michaël de Boevé"
+  },
+  "bugs": {
+    "url": "https://github.com/michaeldeboeve/superlatief-mediaqueries/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "A set of mediaqueries for Sass, Stylus & Less",
+  "files": [
+    "scss",
+    "stylus",
+    "less"
+  ],
+  "homepage": "https://github.com/michaeldeboeve/superlatief-mediaqueries#readme",
+  "keywords": [
+    "mediaqueries",
+    "sass",
+    "scss",
+    "stylus",
+    "less",
+    "superlatief",
+    "robonkey"
+  ],
+  "license": "MIT",
+  "name": "superlatief-mediaqueries",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaeldeboeve/superlatief-mediaqueries.git"
+  },
+  "version": "0.0.8"
+}
