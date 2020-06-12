@@ -1,4 +1,14 @@
 
-Todo:
-  ☐ Nav doesn't look great on mobile landscape.
+✅ Todo:
+  ☐ add corner curves to body frame
+  ☐ upload project images
+  ☐ fix skills graph svg
+  ☐ clean styles/ breakout files
+
+🐛 Bugs:
+  ☐ fix fold shadow display w/ hero btns
+  ☐ nav doesn't look great on mobile landscape.
+
+💡Ideas:
   ☐ have indicator on nav for current section.
+  ☐ build project pages?

@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /*------------------------------------------------------------------
-
+TABLE OF CONTENTS
+- Imports
 -------------------------------------------------------------------*/
 
 /****************************/
@@ -11,9 +12,7 @@
 // @import "bootstrap.min.css";
 @import "base/*";
 
-/****************************/
-/** Typography **/
-/****************************/
+
 @import url('https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:100,200,400,700,800,900&display=swap');
 
@@ -42,33 +41,26 @@ h1{
 	font-weight: 100;
 	color: $accent-1-1;
 		@include below($xsmall){
-		text-align: center;
-	}
+			text-align: center;
+		}
 }
 h2{
-	font-size: 2rem;
+	font-size: 2.25rem;
+	letter-spacing: .1rem;
 	line-height: 1.25;
 	text-transform: uppercase;
-	font-weight: 800;
-	color:$grey-1;
-	&.p-rule--1-1{
-		@include p-rule($accent-1-1,$accent-2-1)
-	}
-	&.p-rule--3-1{
-		@include p-rule($accent-3-1,$accent-5-1)
-	}
-	&.p-rule--5-1{
-		@include p-rule($accent-5-1,$accent-3-1)
-	}
+	font-family: $space-font-family;
+	@include p-rule($accent-1-1,$accent-5-1)
+
 	@include below($xsmall){
-		font-size: 2.50rem;
 		text-align: center;
 	}
 }
 h3{
 	font-size: 1.75rem;
-	font-family: $space-font-family;
-	color: $accent-2-1;
+	font-family: $fira-font-family;
+	font-weight: 600;
+	color: $grey-1;
 	@include below($xsmall){
 		font-size: 1.5rem;
 	}
@@ -140,31 +132,9 @@ nav{
 	}
 }
 
-//Animation
-@keyframes flash{
-	0%,100%{
-		opacity:1;
-	}
-	75%{
-		opacity:0;
-	}
-}
-@keyframes fold{
-	0%{
-		transform: translateY(0%);
-		opacity: 1;
-	}
-	50%{
-		opacity: 1;
-	}
-	100%{
-		transform: translateY(100%);
-		opacity: 0;
-	}
-}
-
-
-//BUTTONS
+/****************************/
+/** Buttons **/
+/****************************/
 a.btn,button.btn{
 	display: inline-block;
 	padding: 10px 30px;
@@ -174,7 +144,7 @@ a.btn,button.btn{
 	text-align: center;
 	font-size: .75rem;
 	text-transform: uppercase;
-	font-family: $space-font-family;
+	// font-family: $space-font-family;
 	&.btn-primary{
 		background-color: $accent-1-1;
 		border: 1px solid $accent-1-1;
@@ -217,14 +187,9 @@ a.btn,button.btn{
 /****************************/
 body{
 	font-family: $default-font-family;
-	background: $accent-4-5;
-	.bg{
-		position: fixed;
-		border: 20px solid $grey-1;
-		width: 100%;
-		height: 100vh;
-		z-index: 998;
-	}
+	// background: $accent-4-5;
+	// background: $accent-4-5;
+	background-image: linear-gradient(180deg, $accent-4-5 0%, $grey-5 25%, $grey-5 100%);
 	.frame{
 		background: $grey-1;
 		position: fixed;
@@ -391,26 +356,25 @@ header{
 	top: 0;
 	margin-top: -220vh;
 	height: 220vh;
-	width: 100vw;
+	width: calc(100vw - 40px);
 	background-image: linear-gradient(180deg, #0C0D27 0%, #0D0F0F 15%, #0D0F0F 97%, #0D0F0F 100%);
-	@include	below($xsmall){
+	@include below($xsmall){
 		height: 200rem;
 		margin-top: -200rem;
 	}
 }
 main{
 	height: 100%;
-	padding: 25px 3.25rem;
-	@include above($medium){
-		padding: 25px 230px 0 230px;
-	}
-	@include below($xsmall){
-		padding: 25px 30px;
+	padding: 6rem 3.25rem;
+	@include above($regular){
+		padding: 20px 0 0 0;
+		width: 960px;
+		margin: 0 auto;
 	}
 	section{
 		padding: 50px 0;
 		.h2-wrap{
-			margin-bottom: 50px;
+			margin-bottom: 30px;
 			h2{
 			}
 				@include below($xsmall){
@@ -423,7 +387,6 @@ main{
 			line-height: 1;
 			padding-bottom: 6rem;
 			@include below($xsmall){
-				padding-top: 4.5rem;
 				padding-bottom: 2rem;
 			}
 			h1{
@@ -490,80 +453,102 @@ main{
 			.sec__desc{
 				margin-bottom: 20px;
 			}
-			.gallery{
+			.project__gallery{
 				display: grid;
-				grid-template-columns: 1fr 1fr 1fr 1fr;
-				grid-gap: 20px;
-				grid-auto-rows: 1fr 1fr 1fr 1fr;
-				grid-auto-flow: row dense;
+				grid-template-columns: 1fr 1fr;
+				grid-template-rows: 460px 1.25rem;
+				grid-gap:1.25rem;
 				@include below($xsmall){
 					grid-template-columns: 1fr;
+					grid-template-rows: 1fr;
 				}
 				.project{
-					grid-column-end: span 2;
-					grid-row-end: span 28;
-					border-radius: 10px;
+					border-radius: 20px;
 					background: $accent-1-1;
 					box-shadow: 0 3px 8px 0 rgba(14,15,18,0.30);
 					position: relative;
-					@include below($medium){
-						grid-row-end: span 22;
-
-					}
-					@include below($xsmall){
-						margin:0 10px 0 10px;
-						.project__info{
-							position: absolute;
-							bottom: 0;
-							padding-top:2rem;
-							padding-right: 1rem;
-							padding-bottom:1.75rem;
-							padding-left: 1.75rem;
-							.project__client{
-								font-size: .75rem;
-							}
-							.project__title{
-								font-size: 1.75rem;
-							}
-						}
-					}
-					.project__info{
+					// grid-row: auto;
+					height: 400px;
+					&__info{
 						padding: 1.75rem;
-						&.project__info--bottom{
+						@include below($xsmall){
+							position: absolute;
+							bottom: 0;
+							padding-top: 2rem;
+							padding-right: 1rem;
+							padding-bottom:1.75rem;
+							padding-left: 1.75rem;
+						}
+						&--bottom{
 							position: absolute;
 							bottom: 0;
 							padding-top:2rem;
 							padding-right: 1rem;
 							padding-bottom:1.75rem;
 							padding-left: 1.75rem;
-							}
-						.project__client{
-							text-align: left;
-							text-transform: uppercase;
-							font-size: 1rem;
-						}
-						.project__title{
-							text-align: left;
-							text-transform: none;
 						}
 					}
-					.project__image{
-						width: 100%;
-						height: 250px;
+					&__client{
+						color:#ffffff;
+						text-align: left;
+						text-transform: uppercase;
+						font-size: 1rem;
+						@include below($xsmall){
+							font-size: .75rem;
+						}
 					}
-					&.project--square{
-						background: $accent-2-1;
-						grid-column-end:span 2;
-						grid-row-end:span 22;
-						@include below($medium){
-							grid-row-end:span 15;
+					&__title{
+						color:#ffffff;
+						text-align: left;
+						text-transform: none;
+						@include below($xsmall){
+							font-size: 1.75rem;
+						}
+					}
+					&__sq{
+						height: 460px;
+						@include below($xsmall){
+							height: 262px;
+						}
+					}
+					&__webapp{
+						background: url(/img/project-poi-webapp.png) no-repeat center center;
+						background-color: #4DC0E6;
+						background-size: 110%;
+						background-position: bottom 10px right 215%;
+						@include above($xsmall){
+							height: 540px;
 						}
 						@include below($xsmall){
-							height: 75vw;
+							background-position: top 40px right 200%;
 						}
 					}
-					&.project--blue{
-						background: #4DC0E6;
+					&__pumello{
+						background: url(/img/) no-repeat center center;
+						background-color: #D72D23;
+						background-size: 110%;
+						background-position: bottom 10px right 215%;
+					}
+					&__personal-branding{
+						background: url(/img/) no-repeat center center;
+						background-color: $accent-4-2;
+						background-size: 110%;
+						background-position: top 40px right 200%;
+						@include above($xsmall){
+							grid-row:5;
+							grid-column: 1;
+						}
+					}
+					&__b2b-site{
+						height: 540px;
+						background: url(/img/project-b2b-webapp.png) no-repeat center center;
+						background-color: $accent-2-1;
+						background-size: 110%;
+						background-position: top 10px left 200%;
+						@include above($xsmall){
+							height: 540px;
+							grid-column:2;
+						}
 					}
 				}
 			}
@@ -584,14 +569,13 @@ main{
 					.skill__icon{
 						font-size: 3em;
 						.skill__title{
-							font-weight: bold;
 							text-transform: uppercase;
-							margin-bottom: 1rem;
+							background: none;
+							margin-bottom: .5rem;
 						}
 					}
 					.skill__list{
-						color: $grey-1;
-						font-weight: 400;
+						color: darken($grey-1, 25%);
 						ul{
 							list-style: none;
 							li{
@@ -640,7 +624,7 @@ main{
 										width: 100%;
 										span{
 											background-color: $accent-1-1;
-											height: 3px;
+											height: 2px;
 											width: 0px;
 											display: block;
 											float: left;
@@ -649,7 +633,7 @@ main{
 											margin-bottom: 40px;
 											&::after{
 												content: "";
-												border: 3px solid $accent-1-1;
+												border: 2px solid $accent-1-1;
 												border-radius: 50%;
 												height: 15px;
 												position: absolute;
