@@ -462,31 +462,24 @@ main{
 					grid-template-columns: 1fr;
 					grid-template-rows: 1fr;
 				}
+				@include between($xsmall, $medium){
+					grid-template-rows: 335px 1.25rem;
+				}
 				.project{
 					border-radius: 20px;
 					background: $accent-1-1;
 					box-shadow: 0 3px 8px 0 rgba(14,15,18,0.30);
 					position: relative;
-					// grid-row: auto;
 					height: 400px;
-					&__info{
-						padding: 1.75rem;
-						@include below($xsmall){
-							position: absolute;
-							bottom: 0;
-							padding-top: 2rem;
-							padding-right: 1rem;
-							padding-bottom:1.75rem;
-							padding-left: 1.75rem;
-						}
-						&--bottom{
-							position: absolute;
-							bottom: 0;
-							padding-top:2rem;
-							padding-right: 1rem;
-							padding-bottom:1.75rem;
-							padding-left: 1.75rem;
-						}
+					padding: 2rem 1.50rem;
+					display: flex;
+					align-items: flex-start;
+					@include below($xsmall){
+						align-items: flex-end;
+						padding: 1.25rem;
+					}
+					&__info--bottom{
+						align-items: flex-end;
 					}
 					&__client{
 						color:#ffffff;
@@ -506,48 +499,63 @@ main{
 						}
 					}
 					&__sq{
-						height: 460px;
+						height: 390px;
 						@include below($xsmall){
-							height: 262px;
+							height: 230px;
+						}
+						@include between($xsmall, $medium){
+							height: 260px;
 						}
 					}
 					&__webapp{
 						background: url(/img/project-poi-webapp.png) no-repeat center center;
 						background-color: #4DC0E6;
-						background-size: 110%;
-						background-position: bottom 10px right 215%;
+						background-size: 160%;
+						background-position:top 10% left -10%;
 						@include above($xsmall){
-							height: 540px;
+							background-position: bottom 5% left -30%;
+							background-size: 110%;
+							height: 350px;
 						}
-						@include below($xsmall){
-							background-position: top 40px right 200%;
+						@include above($medium){
+							height: 470px;
 						}
+
 					}
 					&__pumello{
-						background: url(/img/) no-repeat center center;
+						background: url(/img/pumello_iconic_white.svg) no-repeat center center;
 						background-color: #D72D23;
-						background-size: 110%;
-						background-position: bottom 10px right 215%;
+						background-size: 40%;
+						background-position: top 20% right 50%;
+						@include above($xsmall) {
+							background-position: top 30% right 50%;
+						}
 					}
 					&__personal-branding{
-						background: url(/img/) no-repeat center center;
+						background: url(/img/jh_iconic-white.svg) no-repeat center center;
 						background-color: $accent-4-2;
-						background-size: 110%;
-						background-position: top 40px right 200%;
+						background-position: top 20% right 50%;
+						background-size: 65%;
 						@include above($xsmall){
+							background-position: bottom 40% right 50%;
+							background-size: 45%;
 							grid-row:5;
 							grid-column: 1;
 						}
 					}
 					&__b2b-site{
-						height: 540px;
 						background: url(/img/project-b2b-webapp.png) no-repeat center center;
 						background-color: $accent-2-1;
-						background-size: 110%;
-						background-position: top 10px left 200%;
+						background-size: 160%;
+						background-position: top 5% right -5%;
 						@include above($xsmall){
-							height: 540px;
+							background-position: top 5% right -30%;
+							height: 350px;
+							background-size: 110%;
 							grid-column:2;
+						}
+						@include above($medium){
+							height: 470px;
 						}
 					}
 				}
