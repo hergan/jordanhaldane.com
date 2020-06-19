@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:100,200,400,700,800,900&display=swap');
+$spaceFontFamily:'Space Mono',
+monospace;
+$firaFontFamily:'Fira Sans',
+sans-serif;
+$defaultFontFamily:$spaceFontFamily;
+$defaultHeaderFontFamily:$firaFontFamily;
+$fontFamilyLight:100;
+$fontFamilyNormal:400;
+$fontFamilyMedium:600;
+$fontFamilyBold:800;
+strong {
+    font-weight: $fontFamilyBold;
+}
+
+.display {
+    font: $fontFamilyBold 10rem $spaceFontFamily;
+    color: $accent-1-3;
+    text-transform: lowercase;
+}
+
+h1 {
+    font: $fontFamilyLight 5rem $defaultHeaderFontFamily;
+    color: $accent-1-1;
+    @include below($xsmall) {
+        text-align: center;
+    }
+}
+
+h2 {
+    font: $fontFamilyNormal 2.25rem/1.25 $spaceFontFamily;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    @include p-rule($accent-1-1,
+    $accent-5-1) @include below($xsmall) {
+        text-align: center;
+    }
+}
+
+h3 {
+    font: $fontFamilyBold 1.75rem/1.25 $defaultHeaderFontFamily;
+    color: $grey-1;
+    @include below($xsmall) {
+        font-size: 1.5rem;
+    }
+}
+
+h4 {
+    font: $fontFamilyNormal 1.25rem/1.25 $defaultHeaderFontFamily;
+    color: $grey-1;
+    &.contrast {
+        font-weight: $fontFamilyBold;
+        font-style: oblique;
+        text-transform: uppercase;
+    }
+    @include below($xsmall) {
+        font-size: 1rem;
+    }
+}
+
+p {
+    font: $fontFamilyNormal 1.2rem/1.25 $spaceFontFamily;
+    margin-bottom: 1.25rem;
+    color: $grey-1;
+    &.small {
+        font-size: .9rem;
+    }
+}
+
+//Global link typo
+$a-tags: 'a, a:focus';
+$a-tags-hover: 'a:active, a:hover';
+#{$a-tags} {
+    color: $accent-5-1;
+    text-decoration: none;
+    font-family: $spaceFontFamily;
+}
+
+#{$a-tags-hover} {
+    text-decoration: none;
+}
+
+//Nav links typo
+nav {
+    ul {
+        #{$a-tags} {
+            color: $grey-1;
+            @include below($medium) {
+                color: $accent-4-5;
+            }
+        }
+        #{$a-tags-hover} {
+            color: $accent-5-1;
+            font-weight: 800;
+            text-decoration: none;
+            //Creates Custom Bullet
+            position: relative;
+            @include below($medium) {
+                top: 0;
+                left: -14px;
+            }
+            //Creates Custom Bullet cont...
+            // &::before{
+            // 	content: "•";
+            // 	@include below($medium){
+            // 		position: relative;
+            // 		font-weight: 400;
+            // 		font-size: 45px;
+            // 		top: 9px;
+            // 		left: -20px;
+            // 		line-height: 0;
+            // 	}
+            // }
+        }
+    }
+}

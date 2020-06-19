@@ -1,999 +1,778 @@
 @charset "UTF-8";
+
 /*------------------------------------------------------------------
 TABLE OF CONTENTS
 - Imports
 -------------------------------------------------------------------*/
 
+
 /****************************/
+
+
 /** Imports **/
-/****************************/
-@import "vendor/**/*";
-@import "font-awesome.min.css";
-// @import "bootstrap.min.css";
-@import "base/*";
 
-
-@import url('https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans:100,200,400,700,800,900&display=swap');
-
-$space-font-family:'Space Mono', monospace;
-$fira-font-family:'Fira Sans', sans-serif;
-
-
-$default-font-family:$space-font-family;
-
-$headers: 'h1, h2, h3, h4, h5';
-$a-tags: 'a, a:focus';
-$a-tags-hover: 'a:active, a:hover';
-
-#{$headers} {
-	font-family:$fira-font-family;
-}
-.display{
-	font-weight: bold;
-	font-family: $space-font-family;
-	font-size: 10rem;
-	color: $accent-1-3;
-	text-transform: lowercase;
-}
-h1{
-	font-size: 5rem;
-	font-weight: 100;
-	color: $accent-1-1;
-		@include below($xsmall){
-			text-align: center;
-		}
-}
-h2{
-	font-size: 2.25rem;
-	letter-spacing: .1rem;
-	line-height: 1.25;
-	text-transform: uppercase;
-	font-family: $space-font-family;
-	@include p-rule($accent-1-1,$accent-5-1)
-
-	@include below($xsmall){
-		text-align: center;
-	}
-}
-h3{
-	font-size: 1.75rem;
-	font-family: $fira-font-family;
-	font-weight: 600;
-	color: $grey-1;
-	@include below($xsmall){
-		font-size: 1.5rem;
-	}
-}
-h4{
-	font-size: 1.25rem;
-	color: $grey-1;
-	&.contrast{
-	font-weight: 600;
-	font-style: oblique;
-	text-transform: uppercase;
-	}
-	@include below($xsmall){
-		font-size: 1rem;
-	}
-}
-p{
-	font-family: $space-font-family;
-	font-size: 1.2rem;
-	color: $grey-1;
-	&.small{
-		font-size: .9rem;
-	}
-}
-.mar-zero{
-	margin: 0;
-}
-//Global link typo
-#{$a-tags} {
-	color:$accent-5-1;
-	text-decoration: none;
-	font-family: $space-font-family;
-}
-#{$a-tags-hover} {
-	text-decoration: none;
-}
-//Nav links typo
-nav{
-	ul{
-			#{$a-tags}{
-				color: $grey-1;
-				@include below($medium){
-					color: $accent-4-5;
-				}
-			}
-			#{$a-tags-hover} {
-				color: $accent-5-1;
-				font-weight: 800;
-				text-decoration: none;
-				//Creates Custom Bullet
-				position: relative;
-				@include below($medium){
-					top: 0;
-					left: -14px;
-				}
-				//Creates Custom Bullet cont...
-			// &::before{
-			// 	content: "•";
-			// 	@include below($medium){
-			// 		position: relative;
-			// 		font-weight: 400;
-			// 		font-size: 45px;
-			// 		top: 9px;
-			// 		left: -20px;
-			// 		line-height: 0;
-			// 	}
-			// }
-		}
-	}
-}
 
 /****************************/
-/** Buttons **/
-/****************************/
-a.btn,button.btn{
-	display: inline-block;
-	padding: 10px 30px;
-	border-radius:18px;
-	line-height: 1.5;
-	letter-spacing: .1rem;
-	text-align: center;
-	font-size: .75rem;
-	text-transform: uppercase;
-	// font-family: $space-font-family;
-	&.btn-primary{
-		background-color: $accent-1-1;
-		border: 1px solid $accent-1-1;
-		color: $accent-4-5;
-		&.btn--gradient{
-			border: none;
-			background-image: linear-gradient(144deg, $accent-1-1 1%, $accent-1-2 100%);
-		}
-		&.btn--outline{
-			background-color: transparent;
-			border: 1px solid $accent-1-1;
-			color: $accent-1-1;
-		}
-	}
-	&.btn-secondary{
-		&.btn--transparent{
-			background-color: transparent;
-			border: none;
-			color: $accent-1-1;
-		}
-	}
-	// font-weight: 400;
-	&:hover{
-		color: $accent-5-1;
-		background-color: $accent-4-5;
-		border: 1px solid $accent-5-1;
-	}
-	&.btn-primary{
-		&.btn-outline{
-			background-color: transparent;
-			&:hover{
-				border: 1px solid $accent-5-1;
-			}
-		}
-	}
-}
+
+// @import "vendor/**/*";
+@import "vendor/superlatief-mediaqueries/scss/mediaqueries";
+@import "utilities/reset";
+@import "mixins/mixins";
+@import "base/colors";
+@import "base/breakpoints";
+@import "base/typography";
+@import "utilities/utilities";
+@import "modules/*";
+@import "views/*";
+@import "pages/project";
 
 /****************************/
+
+
 /** Main **/
+
+
 /****************************/
-body{
-	font-family: $default-font-family;
-	// background: $accent-4-5;
-	// background: $accent-4-5;
-	background-image: linear-gradient(180deg, $accent-4-5 0%, $grey-5 25%, $grey-5 100%);
-	.frame{
-		background: $grey-1;
-		position: fixed;
-		z-index: 999;
-		&.top{
-			height: 20px;
-			width: 100%;
-		}
-		&.right{
-			right: 0;
-			width: 20px;
-			height: 100vh;
-		}
-		&.bottom{
-			bottom: 0;
-			height: 20px;
-			width: 100%;
-		}
-		&.left{
-			width: 20px;
-			height: 100vh;
-		}
-	}
+
+body {
+    font-family: $defaultFontFamily;
+    // background: $grey-1;
+    background-image: linear-gradient(180deg, $accent-4-5 0%, $grey-5 25%, $grey-5 100%);
+    // background: $accent-4-5;
+    // background: $accent-4-5;
+    .frame {
+        background: $grey-1;
+        position: fixed;
+        z-index: 999;
+        &.top {
+            height: 20px;
+            width: 100%;
+        }
+        &.right {
+            right: 0;
+            width: 20px;
+            height: 100vh;
+        }
+        &.bottom {
+            bottom: 0;
+            height: 20px;
+            width: 100%;
+        }
+        &.left {
+            width: 20px;
+            height: 100vh;
+        }
+    }
+    .gradient {
+        display: none;
+        background-image: linear-gradient(180deg, $accent-4-5 0%, $grey-5 25%, $grey-5 100%);
+        border-radius: 20px;
+        height: calc(100vh - 40px);
+        width: calc(100vw - 40px);
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: -1;
+    }
 }
 
-header{
-	$svg-shape-width-lg:212px;
-	$svg-shape-width-sm:120px;
-	$header-margin:20px;
-	position: fixed;
-	z-index: 999;
-	padding: 20px;
-	//LOGO
-	.logo-bg-shape{
-		position: fixed;
-		top: 19px;
-		left: 19px;
-		z-index: -1;
-		height: 125px;
-		@include above($medium){
-			height: 160px;
-		}
-	}
-	.logo{
-		width: 60px;
-		height: auto;
-		@include above($medium){
-			width: 80px;
-		}
-	}
-	nav{
-		z-index: 999;
-		position: fixed;
-		@include above($medium){
-			background: transparent;
-			left: 20px;
-			top:150px;
-		}
-		@include below($medium){
-			right:20px;
-			top: 40px;
-			width: 40vw;
-			padding: 30px;
-			transform: translateX(100%);
-			background: $grey-1;
-			border-radius: 10px;
-			transition: transform 500ms;
-			&.nav--open{
-				transform: translateX(5%);
-				& ul,.btn-wrapper{
-					opacity: 1;
-				}
-			}
-			& ul,.btn-wrapper{
-				transition: opacity 250ms;
-				opacity: 0;
-			}
-		}
-		@include below($small){
-			width: 50vw;
-		}
-		ul{
-			list-style: none;
-			@include below($medium){
-				padding: 0;
-			}
-			li{
-
-				text-align: center;
-				@include below($small){
-					border-bottom: 1px solid rgb(173, 173, 173);
-					&:first-child{
-						border-top: 1px solid rgb(173, 173, 173);
-					}
-				}
-				@include above($medium){
-					border-bottom: none;
-					writing-mode: tb-rl;
-					display: flex;
-					line-height: 1.5;
-				}
-				a{
-					@include below($medium){
-						padding: 20px 0;
-						display: block;
-					}
-					@include above($medium){
-						padding: 1rem 1.7rem;
-						white-space: nowrap;
-						@include transform(rotate(180deg));
-					}
-			}
-			}
-		}
-		.btn-wrapper{
-			display: flex;
-			justify-content: center;
-			padding: 0 10px;
-			.btn{
-				@include above($medium){
-					display: none;
-				}
-				margin-top: 30px;
-				padding: 10px 15px;
-			}
-		}
-		.pull-tab{
-			position: fixed;
-			top: 70px;
-			right: 20px;
-			display: none;
-			@include below($medium){
-				display: block;
-				top: .5rem;
-				left: -25px;
-				cursor: pointer;
-			}
-		}
-	}
-}
-.before-the-fold-shadow{
-	display: none;
-	// display:block;
-	z-index: 99;
-	width:100vw;
-	height:60vh;
-	position: absolute;
-	bottom:-10px;
-	opacity: 0.8;
-	background-blend-mode: multiply;
-	background-image: linear-gradient(180deg, rgba(12,13,39,0.00) 0%, #0C0D27 84%);
-	@include below($xsmall){
-		display: none;
-	}
-	&.disappear{
-		animation-name:fold;
-		animation-duration: .5s;
-		opacity: 0;
-	}
-}
-.gradient-bg{
-	z-index: -1;
-	position: relative;
-	top: 0;
-	margin-top: -220vh;
-	height: 220vh;
-	width: calc(100vw - 40px);
-	background-image: linear-gradient(180deg, #0C0D27 0%, #0D0F0F 15%, #0D0F0F 97%, #0D0F0F 100%);
-	@include below($xsmall){
-		height: 200rem;
-		margin-top: -200rem;
-	}
-}
-main{
-	height: 100%;
-	padding: 6rem 3.25rem;
-	@include above($regular){
-		padding: 20px 0 0 0;
-		width: 960px;
-		margin: 0 auto;
-	}
-	section{
-		padding: 50px 0;
-		.h2-wrap{
-			margin-bottom: 30px;
-			h2{
-			}
-				@include below($xsmall){
-					text-align: center;
-				}
-			}
-		/********Intro Sec CSS********/
-		&.intro-sec{
-			padding-top: 1.4rem;
-			line-height: 1;
-			padding-bottom: 6rem;
-			@include below($xsmall){
-				padding-bottom: 2rem;
-			}
-			h1{
-				text-transform: uppercase;
-				&.first-name{
-					font-size: 3.25rem;
-					@include below($tiny){
-						font-size: 3.25rem;
-					}
-					.last-name{
-						display: inline-block;
-						text-transform: uppercase;
-						font-weight: 800;
-						color: $accent-5-1;
-						font-size:3.25rem;
-							span.blue{
-								color: $accent-1-1;
-								font-size: inherit;
-							}
-							@include below($tiny){
-								font-size: 3.25rem;
-							}
-					}
-				}
-			}
-			p{
-				&.small{
-					text-transform: uppercase;
-				}
-				@include below($xsmall){
-					text-align: center;
-				}
-				&.about-me{
-					line-height: normal;
-					margin-bottom: 1rem;
-					margin-top: 4rem;
-				}
-			}
-			.cta{
-				@include below($xsmall){
-					text-align: center;
-				}
-			}
-		}
-		&.what-i-do-sec{
-			//DECIDING IF I WANT THIS SECTION OR NOT
-			display:none;
-			.icon{
-				margin: 0 auto;
-				height: 75px;
-				width: 75px;
-				border: 1px solid $accent-5-1;
-				border-radius: 50%;
-				display: inline-block;
-			}
-		}
-		// PORTFOLIO GRID SECTION
-		&.grid-sec{
-			.sec__desc{
-				@include below($xsmall){
-					text-align: center;
-				}
-			}
-			.sec__desc{
-				margin-bottom: 20px;
-			}
-			.project__gallery{
-				display: grid;
-				grid-template-columns: 1fr 1fr;
-				grid-template-rows: 460px 1.25rem;
-				grid-gap:1.25rem;
-				@include below($xsmall){
-					grid-template-columns: 1fr;
-					grid-template-rows: 1fr;
-				}
-				@include between($xsmall, $medium){
-					grid-template-rows: 335px 1.25rem;
-				}
-				.project{
-					border-radius: 20px;
-					background: $accent-1-1;
-					box-shadow: 0 3px 8px 0 rgba(14,15,18,0.30);
-					position: relative;
-					height: 400px;
-					padding: 2rem 1.50rem;
-					display: flex;
-					align-items: flex-start;
-					@include below($xsmall){
-						align-items: flex-end;
-						padding: 1.25rem;
-					}
-					&__info--bottom{
-						align-items: flex-end;
-					}
-					&__client{
-						color:#ffffff;
-						text-align: left;
-						text-transform: uppercase;
-						font-size: 1rem;
-						@include below($xsmall){
-							font-size: .75rem;
-						}
-					}
-					&__title{
-						color:#ffffff;
-						text-align: left;
-						text-transform: none;
-						@include below($xsmall){
-							font-size: 1.75rem;
-						}
-					}
-					&__sq{
-						height: 390px;
-						@include below($xsmall){
-							height: 230px;
-						}
-						@include between($xsmall, $medium){
-							height: 260px;
-						}
-					}
-					&__webapp{
-						background: url(/img/project-poi-webapp.png) no-repeat center center;
-						background-color: #4DC0E6;
-						background-size: 160%;
-						background-position:top 10% left -10%;
-						@include above($xsmall){
-							background-position: bottom 5% left -30%;
-							background-size: 110%;
-							height: 350px;
-						}
-						@include above($medium){
-							height: 470px;
-						}
-
-					}
-					&__pumello{
-						background: url(/img/pumello_iconic_white.svg) no-repeat center center;
-						background-color: #D72D23;
-						background-size: 40%;
-						background-position: top 20% right 50%;
-						@include above($xsmall) {
-							background-position: top 30% right 50%;
-						}
-					}
-					&__personal-branding{
-						background: url(/img/jh_iconic-white.svg) no-repeat center center;
-						background-color: $accent-4-2;
-						background-position: top 20% right 50%;
-						background-size: 65%;
-						@include above($xsmall){
-							background-position: bottom 40% right 50%;
-							background-size: 45%;
-							grid-row:5;
-							grid-column: 1;
-						}
-					}
-					&__b2b-site{
-						background: url(/img/project-b2b-webapp.png) no-repeat center center;
-						background-color: $accent-2-1;
-						background-size: 160%;
-						background-position: top 5% right -5%;
-						@include above($xsmall){
-							background-position: top 5% right -30%;
-							height: 350px;
-							background-size: 110%;
-							grid-column:2;
-						}
-						@include above($medium){
-							height: 470px;
-						}
-					}
-				}
-			}
-		}
-		&.capabilities-sec{
-			.skill__cards{
-				display: grid;
-				grid-template-columns: 1fr 1fr;
-				text-align: center;
-				@include below($xsmall){
-					grid-template-columns: 1fr;
-				}
-				.skill__card{
-					@include below($xsmall){
-						margin-top: 30px;
-						padding: 0 .5rem;
-					}
-					.skill__icon{
-						font-size: 3em;
-						.skill__title{
-							text-transform: uppercase;
-							background: none;
-							margin-bottom: .5rem;
-						}
-					}
-					.skill__list{
-						color: darken($grey-1, 25%);
-						ul{
-							list-style: none;
-							li{
-							}
-						}
-					}
-				}
-			}
-		}
-		&.tools-skills-sec{
-			// background-color: $grey-5;
-			.tools-skills{
-				display: grid;
-				grid-template-columns: 1fr 1fr;
-				@include below($xsmall){
-					margin: inherit;
-					grid-template-columns: 100%;
-				}
-				.tools-sec{
-					.tool-list{
-						// display: grid;
-						// grid-gap: 3rem;
-						// grid-template-columns: 1fr 1fr;
-						// grid-template-rows: 1fr;
-						.tool{
-							@include below($medium){
-								margin-bottom: 40px;
-							}
-							@include above($medium){
-								// margin-bottom: 50px;
-							}
-							h4{
-								@include above($medium){
-									// padding-bottom: 10px;
-								}
-								padding-bottom: 10px;
-							}
-							.progress-bar-graph{
-								.progress-bar-wrap{
-									position: relative;
-									float: left;
-									width: 100%;
-									.bar-wrap{
-										position: relative;
-										float: left;
-										width: 100%;
-										span{
-											background-color: $accent-1-1;
-											height: 2px;
-											width: 0px;
-											display: block;
-											float: left;
-											position: relative;
-											overflow: visible !important;
-											margin-bottom: 40px;
-											&::after{
-												content: "";
-												border: 2px solid $accent-1-1;
-												border-radius: 50%;
-												height: 15px;
-												position: absolute;
-												right: 0px;
-												background: $accent-4-5;
-												top: -6px;
-												width: 15px;
-											}
-											strong{
-												display: block;
-												float: left;
-												position: absolute;
-												right: 0;
-												top: -35px;
-												color: $grey-1;
-											}
-										}
-									}
-									}
-							}
-						}
-					}
-				}
-				.skills-sec{
-					@include below(xsmall){
-						margin-bottom: 40px;
-					}
-					display: flex;
-					justify-content: center;
-					img{
-						width: 100%;
-					}
-				}
-			}
-		}
-		&.education-sec{
-			display: none;
-			.school-wrap:first-of-type{
-				margin-top: 40px;
-			}
-			hr{
-				margin: 40px 0;
-				color: $grey-1;
-			}
-		}
-		&.experience-sec{
-			display: none;
-			position: relative;
-			.exp-wrap{
-				margin-top: 20px;
-				&::before{
-					content: "";
-					position: absolute;
-					top: 70px;
-					left: 23px;
-					height: 15px;
-					width: 15px;
-					border-radius: 50%;
-					background: $accent-1-1;
-				}
-				&::after{
-					content: "";
-					position: absolute;
-					bottom: 70px;
-					left: 23px;
-					height: 15px;
-					width: 15px;
-					border-radius: 50%;
-					background: $accent-1-1;
-				}
-				.exp{
-					display: grid;
-					grid-template-columns: 60px 1fr;
-					.exp-tml-wrap{
-						position: relative;
-						.exp-tml{
-							margin: 0 auto;
-							height:100%;
-							width: 1px;
-							background-image: linear-gradient(to bottom, $accent-1-1 70%, rgba(255,255,255,0) 0%);
-							background-size: 1px 20px;
-						}
-					}
-					.exp-content{
-						margin-top: 40px;
-						position: relative;
-						&::before{
-							content: "";
-							position: absolute;
-							top: -13px;
-							left: -50px;
-							height: 40px;
-							width: 40px;
-							border-radius: 50%;
-							border: 1px solid $grey-1;
-							background: $accent-4-5;
-						}
-						&::after{
-							content: "";
-							position: absolute;
-							top: 0;
-							left: -37px;
-							height: 15px;
-							width: 15px;
-							border-radius: 50%;
-							background: $grey-1;
-						}
-						.exp-vl{
-							position: absolute;
-							top: 7px;
-							left: -22px;
-							height: 1px;
-							width: 50px;
-							background: $grey-1;
-						}
-						.exp-length{
-							color: $accent-1-1;
-							font-size: 32px;
-							font-weight: 900;
-							font-style: italic;
-							display: inline-block;
-							z-index: 999;
-						}
-					}
-				}
-			}
-		}
-		&.contact-sec{
-			form{
-				display: none;
-			}
-			@include above($medium){
-				margin-bottom: 50px;
-			}
-			.input-wrap{
-				margin-bottom:40px;
-				overflow:hidden;
-				position: relative;
-				input{
-					height: 50px;
-					width: 100%;
-					position: relative;
-					&:focus{
-						outline: none;
-					}
-					&.input-control{
-						background: transparent none repeat scroll 0 0;
-						border: none;
-						box-shadow: none;
-						color: $grey-1;
-						display: block;
-						overflow: hidden;
-						font-size: 13px;
-						font-family: $space-font-family;
-						padding-left: 0;
-						padding-top: 15px;
-					}
-				}
-				textarea.input-control{
-					height: auto;
-					width: 100%;
-					background: transparent none repeat scroll 0 0;
-					border: none;
-					box-shadow: none;
-					color: $grey-1;
-					display: block;
-					overflow: hidden;
-					font-size: 13px;
-					font-family: $space-font-family;
-					padding-left: 0;
-					padding-top: 15px;
-				}
-				.input-label{
-					position: absolute;
-					display: inline-block;
-					bottom: 0;
-					left: 0;
-					width: 100%;
-					height: calc(100%-1px);
-					font-family: $space-font-family;
-					color:$grey-1;
-					font-size: 13px;
-					text-align: left;
-					text-transform: uppercase;
-					&::before{
-						content:"";
-						position: absolute;
-						top:0;
-						left:-1px;
-						width: 100%;
-						height: 100%;
-						border-bottom:2px solid rgba($grey-1, .5);
-					}
-				}
-			}
-			button{
-				color: $accent-1-1;
-				@include above($small){
-					float: left;
-				}
-			}
-			p{
-				float: left;
-				margin-left: 20px;
-				margin-top: 5px;
-				@include below($xsmall){
-					margin-left:0;
-				}
-			}
-		}
-	}
+header {
+    $svg-shape-width-lg: 212px;
+    $svg-shape-width-sm: 120px;
+    $header-margin: 20px;
+    position: fixed;
+    z-index: 999;
+    padding: 20px;
+    //LOGO
+    .logo-bg-shape {
+        position: fixed;
+        top: 19px;
+        left: 19px;
+        z-index: -1;
+        height: 125px;
+        @include above($medium) {
+            height: 160px;
+        }
+    }
+    .logo {
+        width: 60px;
+        height: auto;
+        @include above($medium) {
+            width: 80px;
+        }
+    }
+    nav {
+        z-index: 999;
+        position: fixed;
+        @include above($medium) {
+            background: transparent;
+            left: 20px;
+            top: 150px;
+        }
+        @include below($medium) {
+            right: 20px;
+            top: 40px;
+            width: 40vw;
+            padding: 30px;
+            transform: translateX(100%);
+            background: $grey-1;
+            border-radius: 10px;
+            transition: transform 500ms;
+            &.nav--open {
+                transform: translateX(5%);
+                & ul,
+                .btn-wrapper {
+                    opacity: 1;
+                }
+            }
+            & ul,
+            .btn-wrapper {
+                transition: opacity 250ms;
+                opacity: 0;
+            }
+        }
+        @include below($small) {
+            width: 50vw;
+        }
+        ul {
+            list-style: none;
+            @include below($medium) {
+                padding: 0;
+            }
+            li {
+                text-align: center;
+                @include below($small) {
+                    border-bottom: 1px solid rgb(173, 173, 173);
+                    &:first-child {
+                        border-top: 1px solid rgb(173, 173, 173);
+                    }
+                }
+                @include above($medium) {
+                    border-bottom: none;
+                    writing-mode: tb-rl;
+                    display: flex;
+                    line-height: 1.5;
+                }
+                a {
+                    @include below($medium) {
+                        padding: 20px 0;
+                        display: block;
+                    }
+                    @include above($medium) {
+                        padding: 1rem 1.7rem;
+                        white-space: nowrap;
+                        @include transform(rotate(180deg));
+                    }
+                }
+            }
+        }
+        .btn-wrapper {
+            display: flex;
+            justify-content: center;
+            padding: 0 10px;
+            .btn {
+                @include above($medium) {
+                    display: none;
+                }
+                margin-top: 30px;
+                padding: 10px 15px;
+            }
+        }
+        .pull-tab {
+            position: fixed;
+            top: 70px;
+            right: 20px;
+            display: none;
+            @include below($medium) {
+                display: block;
+                top: .5rem;
+                left: -25px;
+                cursor: pointer;
+            }
+        }
+    }
 }
 
-footer{
-	padding: 30px;
-	background: $accent-4-2;
-	@include above($medium){
-		padding: 25px 25px 0 150px;
-	}
-	@include above($xsmall){
-		padding: 50px;
-	}
-	.freelance-status{
-		padding-bottom: 30px;
-		@include above($xsmall){
-			width: 70%;
-			margin: 0 auto;
-		}
-		@include above($medium){
-			width: 25%;
-			text-align: center;
-		}
-		.status-pointer{
-			background: $accent-5-1 none repeat scroll 0 0;
-			position: relative;
-			display: inline-block;
-			width: 14px;
-			height: 14px;
-			margin-left: 8px;
-			margin-right: 32px;
-			margin-bottom: 20px;
-			margin-top: 20px;
-			float: left;
-			border-radius: 50%;
-			animation-name:flash;
-			animation-duration: 1s;
-			animation-iteration-count: infinite;
-			@include above($xsmall){
-				margin: 10px 32px 20px 8px;
-			}
-			@include above($medium){
-				margin: 5px;
-				margin-right: 10px;
-			}
-			@include below($xsmall){
-				margin-right: 15px;
-			}
-			content: " ";
-			&:before{
-				background-color: $accent-5-1;
-				content: " ";
-				position: absolute;
-				top: -8px;
-				left: -8px;
-				display: inline-block;
-				width: 30px;
-				height: 30px;
-				opacity: 0.2;
-				border-radius: 50%;
-			}
-		}
-		.status-tag{
-			margin-bottom: 0px;
-			display: block;
-			@include above($medium){
-				// text-align: center;
-			}
-			@include below($small){
-				font-size: 1.25rem;
-			}
-		}
-	}
-	.social{
-		clear: both;
-		@include above($xsmall){
-			width: 30%;
-			margin: 0 auto;
-			margin-bottom: 30px;
-		}
-		.social__icons{
-			list-style: none;
-			display: flex;
-			justify-content: space-between;
-			li{
-				display: inline-block;
-				a{
-					background-size: 30px 30px;
-					width: 30px;
-					height: 30px;
-					display: block;
-					&.social-icon--behance{
-						background-image: url(/img/behance.svg);
-					}
-					&.social-icon--github{
-						background-image: url(/img/github.svg);
-					}
-					&.social-icon--instagram{
-						background-image: url(/img/instagram.svg);
-					}
-					&.social-icon--twitter{
-						background-image: url(/img/twitter.svg);
-					}
-				}
-			}
-		}
-	}
-	.goto-top{
-		padding-top: 0.5rem;
-		width: 30%;
-		display: inline-block;
-		@include below($xsmall){
-			width: 100%;
-			text-align: center;
-		}
-		a{
-			text-transform: uppercase;
-			text-decoration: underline;
-			-webkit-text-underline-position: under;
-			-ms-text-underline-position: below;
-			text-underline-position: under;
-		}
-	}
-	.copyright-wrap{
-		@include above($xsmall){
-			width: 70%;
-			padding-top: .9rem;
-			float: right;
-		}
-		@include below($small){
-			padding-top: 0.5rem;
-		}
-	}
-	.copyright-wrap p{
-		font-size: .75rem;
-		text-align: center;
-		span{
-			color: $accent-1-1;
-			text-transform: upper;
-		}
-		@include above($xsmall){
-			font-size: 1rem;
-			text-align: right;
-		}
-	}
+.before-the-fold-shadow {
+    // display: none;
+    display: block;
+    pointer-events: none;
+    z-index: 99;
+    width: 100vw;
+    height: 60vh;
+    position: absolute;
+    bottom: -10px;
+    opacity: 0.8;
+    background-blend-mode: multiply;
+    background-image: linear-gradient(180deg, rgba(12, 13, 39, 0.00) 0%, #0C0D27 84%);
+    &.disappear {
+        animation-name: fold;
+        animation-duration: .25s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes fold {
+        from {
+            opacity: 0.8;
+        }
+        to {
+            opacity: 0;
+        }
+    }
+}
+
+.gradient-bg {
+    z-index: -1;
+    position: relative;
+    top: 0;
+    margin-top: -220vh;
+    height: 220vh;
+    width: calc(100vw - 40px);
+    background-image: linear-gradient(180deg, #0C0D27 0%, #0D0F0F 15%, #0D0F0F 97%, #0D0F0F 100%);
+    @include below($xsmall) {
+        height: 200rem;
+        margin-top: -200rem;
+    }
+}
+
+main {
+    height: 100%;
+    padding: 1.25rem;
+    padding-bottom: 0;
+    margin: 0 auto;
+    width: 262px;
+    @include above($small) {
+        width: 636px;
+    }
+    @include above($regular) {
+        width: 960px;
+    }
+    section {
+        padding: 1.7rem 0;
+        padding-bottom: 3rem;
+        .h2-wrap {
+            margin-bottom: 30px;
+            h2 {}
+            @include below($xsmall) {
+                text-align: center;
+            }
+        }
+        /********Intro Sec CSS********/
+        &.intro-sec {
+            // padding-top: 1.4rem;
+            line-height: 1;
+            // padding-bottom: 6rem;
+            @include below($xsmall) {}
+            h1 {
+                text-transform: uppercase;
+                &.first-name {
+                    font-size: 3.25rem;
+                    @include below($tiny) {
+                        font-size: 3.25rem;
+                    }
+                    .last-name {
+                        display: inline-block;
+                        text-transform: uppercase;
+                        font-weight: 800;
+                        color: $grey-1;
+                        font-size: 3.25rem;
+                        span.blue {
+                            color: $accent-1-1;
+                            font-size: inherit;
+                        }
+                        @include below($tiny) {
+                            font-size: 3.25rem;
+                        }
+                    }
+                }
+            }
+            p {
+                &.small {
+                    text-transform: uppercase;
+                }
+                @include below($xsmall) {
+                    text-align: center;
+                }
+                &.about-me {
+                    line-height: normal;
+                    margin-bottom: 1rem;
+                    margin-top: 4rem;
+                }
+            }
+            .cta {
+                @include below($xsmall) {
+                    text-align: center;
+                }
+            }
+        }
+        &.what-i-do-sec {
+            //DECIDING IF I WANT THIS SECTION OR NOT
+            display: none;
+            .icon {
+                margin: 0 auto;
+                height: 75px;
+                width: 75px;
+                border: 1px solid $accent-5-1;
+                border-radius: 50%;
+                display: inline-block;
+            }
+        }
+        // PORTFOLIO GRID SECTION
+        &.grid-sec {
+            .sec__desc {
+                @include below($xsmall) {
+                    text-align: center;
+                }
+            }
+            .sec__desc {
+                margin-bottom: 20px;
+            }
+            .project__gallery {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 460px 1.25rem;
+                grid-gap: 1.25rem;
+                @include below($xsmall) {
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1fr;
+                }
+                @include between($xsmall, $medium) {
+                    grid-template-rows: 335px 1.25rem;
+                }
+                .project {
+                    border-radius: 20px;
+                    background: $accent-1-1;
+                    box-shadow: 0 3px 8px 0 rgba(14, 15, 18, 0.30);
+                    position: relative;
+                    height: 400px;
+                    padding: 2rem 1.50rem;
+                    display: flex;
+                    align-items: flex-start;
+                    @include below($xsmall) {
+                        align-items: flex-end;
+                        padding: 1.25rem;
+                    }
+                    &__info--bottom {
+                        align-items: flex-end;
+                    }
+                    &__client {
+                        color: #ffffff;
+                        text-align: left;
+                        text-transform: uppercase;
+                        font-size: 1rem;
+                        @include below($xsmall) {
+                            font-size: .75rem;
+                        }
+                    }
+                    &__title {
+                        color: #ffffff;
+                        text-align: left;
+                        text-transform: none;
+                        @include below($xsmall) {
+                            font-size: 1.75rem;
+                        }
+                    }
+                    &__sq {
+                        height: 390px;
+                        @include below($xsmall) {
+                            height: 230px;
+                        }
+                        @include between($xsmall, $medium) {
+                            height: 260px;
+                        }
+                    }
+                    &__webapp {
+                        background: url(/img/project-poi-webapp.png) no-repeat center center;
+                        background-color: #4DC0E6;
+                        background-size: 160%;
+                        background-position: top 10% left -10%;
+                        @include above($xsmall) {
+                            background-position: bottom 5% left -30%;
+                            background-size: 110%;
+                            height: 350px;
+                        }
+                        @include above($medium) {
+                            height: 470px;
+                        }
+                    }
+                    &__pumello {
+                        background: url(/img/pumello_iconic_white.svg) no-repeat center center;
+                        background-color: #D72D23;
+                        background-size: 40%;
+                        background-position: top 20% right 50%;
+                        @include above($xsmall) {
+                            background-position: top 30% right 50%;
+                        }
+                    }
+                    &__personal-branding {
+                        background: url(/img/jh_iconic-white.svg) no-repeat center center;
+                        background-color: $accent-4-2;
+                        background-position: top 20% right 50%;
+                        background-size: 65%;
+                        @include above($xsmall) {
+                            background-position: bottom 40% right 50%;
+                            background-size: 45%;
+                            grid-row: 5;
+                            grid-column: 1;
+                        }
+                    }
+                    &__b2b-site {
+                        background: url(/img/project-b2b-webapp.png) no-repeat center center;
+                        background-color: $accent-2-1;
+                        background-size: 160%;
+                        background-position: top 5% right -5%;
+                        @include above($xsmall) {
+                            background-position: top 5% right -30%;
+                            height: 350px;
+                            background-size: 110%;
+                            grid-column: 2;
+                        }
+                        @include above($medium) {
+                            height: 470px;
+                        }
+                    }
+                }
+            }
+        }
+        &.capabilities-sec {
+            .skill__cards {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                text-align: center;
+                @include below($xsmall) {
+                    grid-template-columns: 1fr;
+                }
+                .skill__card {
+                    @include below($xsmall) {
+                        margin-top: 30px;
+                        padding: 0 .5rem;
+                    }
+                    .skill__icon {
+                        font-size: 3em;
+                        .skill__title {
+                            text-transform: uppercase;
+                            background: none;
+                            margin-bottom: .5rem;
+                        }
+                    }
+                    .skill__list {
+                        color: darken($grey-1, 25%);
+                        ul {
+                            list-style: none;
+                            li {}
+                        }
+                    }
+                }
+            }
+        }
+        &.tools-skills-sec {
+            // background-color: $grey-5;
+            .tools-skills {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                @include below($xsmall) {
+                    margin: inherit;
+                    grid-template-columns: 100%;
+                }
+                .tools-sec {
+                    .tool-list {
+                        // display: grid;
+                        // grid-gap: 3rem;
+                        // grid-template-columns: 1fr 1fr;
+                        // grid-template-rows: 1fr;
+                        .tool {
+                            @include below($medium) {
+                                margin-bottom: 40px;
+                            }
+                            @include above($medium) {
+                                // margin-bottom: 50px;
+                            }
+                            h4 {
+                                @include above($medium) {
+                                    // padding-bottom: 10px;
+                                }
+                                padding-bottom: 10px;
+                            }
+                            .progress-bar-graph {
+                                .progress-bar-wrap {
+                                    position: relative;
+                                    float: left;
+                                    width: 100%;
+                                    .bar-wrap {
+                                        position: relative;
+                                        float: left;
+                                        width: 100%;
+                                        span {
+                                            background-color: $accent-1-1;
+                                            height: 2px;
+                                            width: 0px;
+                                            display: block;
+                                            float: left;
+                                            position: relative;
+                                            overflow: visible !important;
+                                            margin-bottom: 40px;
+                                            &::after {
+                                                content: "";
+                                                border: 2px solid $accent-1-1;
+                                                border-radius: 50%;
+                                                height: 15px;
+                                                position: absolute;
+                                                right: 0px;
+                                                background: $accent-4-5;
+                                                top: -6px;
+                                                width: 15px;
+                                            }
+                                            strong {
+                                                display: block;
+                                                float: left;
+                                                position: absolute;
+                                                right: 0;
+                                                top: -35px;
+                                                color: $grey-1;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .skills-sec {
+                    @include below(xsmall) {
+                        margin-bottom: 40px;
+                    }
+                    display: flex;
+                    justify-content: center;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        &.contact-sec {
+            form {
+                display: none;
+            }
+            @include above($medium) {
+                margin-bottom: 50px;
+            }
+            .input-wrap {
+                margin-bottom: 40px;
+                overflow: hidden;
+                position: relative;
+                input {
+                    height: 50px;
+                    width: 100%;
+                    position: relative;
+                    &:focus {
+                        outline: none;
+                    }
+                    &.input-control {
+                        background: transparent none repeat scroll 0 0;
+                        border: none;
+                        box-shadow: none;
+                        color: $grey-1;
+                        display: block;
+                        overflow: hidden;
+                        font-size: 13px;
+                        font-family: $spaceFontFamily;
+                        padding-left: 0;
+                        padding-top: 15px;
+                    }
+                }
+                textarea.input-control {
+                    height: auto;
+                    width: 100%;
+                    background: transparent none repeat scroll 0 0;
+                    border: none;
+                    box-shadow: none;
+                    color: $grey-1;
+                    display: block;
+                    overflow: hidden;
+                    font-size: 13px;
+                    font-family: $spaceFontFamily;
+                    padding-left: 0;
+                    padding-top: 15px;
+                }
+                .input-label {
+                    position: absolute;
+                    display: inline-block;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: calc(100%-1px);
+                    font-family: $spaceFontFamily;
+                    color: $grey-1;
+                    font-size: 13px;
+                    text-align: left;
+                    text-transform: uppercase;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: -1px;
+                        width: 100%;
+                        height: 100%;
+                        border-bottom: 2px solid rgba($grey-1, .5);
+                    }
+                }
+            }
+            button {
+                color: $accent-1-1;
+                @include above($small) {
+                    float: left;
+                }
+            }
+            p {
+                float: left;
+                margin-left: 20px;
+                margin-top: 5px;
+                @include below($xsmall) {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    padding: 30px;
+    background: $accent-4-2;
+    @include above($medium) {
+        padding: 25px 25px 0 150px;
+    }
+    @include above($xsmall) {
+        padding: 50px;
+    }
+    .freelance-status {
+        padding-bottom: 30px;
+        @include above($xsmall) {
+            width: 70%;
+            margin: 0 auto;
+        }
+        @include above($medium) {
+            width: 25%;
+            text-align: center;
+        }
+        .status-pointer {
+            background: $accent-5-1 none repeat scroll 0 0;
+            position: relative;
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            margin-left: 8px;
+            margin-right: 32px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            float: left;
+            border-radius: 50%;
+            animation-name: flash;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            @include above($xsmall) {
+                margin: 10px 32px 20px 8px;
+            }
+            @include above($medium) {
+                margin: 5px;
+                margin-right: 10px;
+            }
+            @include below($xsmall) {
+                margin-right: 15px;
+            }
+            content: " ";
+            &:before {
+                background-color: $accent-5-1;
+                content: " ";
+                position: absolute;
+                top: -8px;
+                left: -8px;
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                opacity: 0.2;
+                border-radius: 50%;
+            }
+        }
+        .status-tag {
+            margin-bottom: 0px;
+            display: block;
+            @include above($medium) {
+                // text-align: center;
+            }
+            @include below($small) {
+                font-size: 1.25rem;
+            }
+        }
+    }
+    .social {
+        clear: both;
+        @include above($xsmall) {
+            width: 30%;
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+        .social__icons {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            li {
+                display: inline-block;
+                a {
+                    background-size: 30px 30px;
+                    width: 30px;
+                    height: 30px;
+                    display: block;
+                    &.social-icon--behance {
+                        background-image: url(/img/behance.svg);
+                    }
+                    &.social-icon--github {
+                        background-image: url(/img/github.svg);
+                    }
+                    &.social-icon--instagram {
+                        background-image: url(/img/instagram.svg);
+                    }
+                    &.social-icon--twitter {
+                        background-image: url(/img/twitter.svg);
+                    }
+                }
+            }
+        }
+    }
+    .goto-top {
+        padding-top: 0.5rem;
+        width: 30%;
+        display: inline-block;
+        @include below($xsmall) {
+            width: 100%;
+            text-align: center;
+        }
+        a {
+            text-transform: uppercase;
+            text-decoration: underline;
+            -webkit-text-underline-position: under;
+            -ms-text-underline-position: below;
+            text-underline-position: under;
+        }
+    }
+    .copyright-wrap {
+        @include above($xsmall) {
+            width: 70%;
+            padding-top: .9rem;
+            float: right;
+        }
+        @include below($small) {
+            padding-top: 0.5rem;
+        }
+    }
+    .copyright-wrap p {
+        font-size: .75rem;
+        text-align: center;
+        span {
+            color: $accent-1-1;
+            text-transform: upper;
+        }
+        @include above($xsmall) {
+            font-size: 1rem;
+            text-align: right;
+        }
+    }
 }
