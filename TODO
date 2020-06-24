@@ -1,17 +1,36 @@
 
 ✅ Todo:
-  ☐ add corner curves to body frame
-  ☐ upload project images
-  ☐ fix skills graph svg
+  ✔ update alt tags @done(20-06-23 23:33)
+  ☐ Add linkedIn social icon. replace w/ behance?
+  ☐ project pages
+    ☐ implement image lightbox for images
+    ☐ ZNL
+    ☐ impact health
+    ☐ ETN
   ☐ clean styles/ breakout files
+    ☐ home.scss
+    ☐ projects.scss
 
 🐛 Bugs:
-  ☐ fix fold shadow display w/ hero btns
   ☐ nav doesn't look great on mobile landscape.
+  ☐ frame rounded edges doesn't look great on mobile safari
+  ☐ footer bgc takes away gradient bg border-radius
 
 💡Ideas:
+  ☐ layout templating
+  ☐ add corner curves to body frame
+    ☐ See bug #3
   ☐ have indicator on nav for current section.
-  ☐ build project pages?
-    ✔ mock up in sketch @done(20-06-15 22:06)
   ☐ move index to src folder
   ☐ make site frame 1.1 to 1.2 gradient (will have to inline logo bg svg)
+
+Archive:
+  ✔ layout/style @done(20-06-23 23:18) @project(✅ Todo)
+  ✔ pumello @done(20-06-23 23:18) @project(✅ Todo)
+  ✔ personal @done(20-06-23 23:18) @project(✅ Todo)
+  ✔ SCSS build errors @done(20-06-23 23:19) @project(🐛 Bugs)
+  ✔ mock up in sketch @done(20-06-15 22:06) @project(✅ Todo)
+  ✔ store @done(20-06-21 02:04) @project(✅ Todo)
+  ✔  b2b @done(20-06-21 02:04) @project(✅ Todo)
+  ✔ fix skills graph svg @done(20-06-21 02:07) @project(✅ Todo)
+  ✔ fix fold shadow display w/ hero btns @done(20-06-16 21:44) @project(🐛 Bugs)
