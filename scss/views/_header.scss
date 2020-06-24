@@ -1,0 +1,26 @@
+header {
+    $svg-shape-width-lg: 212px;
+    $svg-shape-width-sm: 120px;
+    $header-margin: 20px;
+    position: fixed;
+    z-index: 999;
+    padding: 20px;
+    //LOGO
+    .logo-bg-shape {
+        position: fixed;
+        top: 19px;
+        left: 19px;
+        z-index: -1;
+        height: 125px;
+        @include above($medium) {
+            height: 160px;
+        }
+    }
+    .logo {
+        width: 60px;
+        height: auto;
+        @include above($medium) {
+            width: 80px;
+        }
+    }
+}

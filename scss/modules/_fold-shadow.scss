@@ -1,0 +1,33 @@
+.fold-shadow {
+    // display: none;
+    display: block;
+    pointer-events: none;
+    z-index: 99;
+    width: 100vw;
+    height: 90vh;
+    position: absolute;
+    bottom: -5%;
+    opacity: 0.9;
+    background-blend-mode: multiply;
+    background-image: linear-gradient(180deg, hsla(238, 53, 10, 0.00) 0%, $accent-4-5 84%);
+    @include below($medium) {
+        height: 60vh;
+    }
+    &.disappear {
+        animation-name: fold;
+        animation-duration: .125s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes fold {
+        from {
+            opacity: 0.8;
+        }
+        to {
+            opacity: 0;
+        }
+    }
+}
+
+.test {
+    color: hsla(238, 53%, 10%, 0);
+}

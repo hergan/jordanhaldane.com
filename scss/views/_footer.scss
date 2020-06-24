@@ -1,0 +1,142 @@
+footer {
+    padding: 30px;
+    background: $accent-4-2;
+    @include above($medium) {
+        padding: 25px 25px 0 150px;
+    }
+    @include above($xsmall) {
+        padding: 50px;
+    }
+    .freelance-status {
+        padding-bottom: 30px;
+        @include above($xsmall) {
+            width: 70%;
+            margin: 0 auto;
+        }
+        @include above($medium) {
+            width: 25%;
+            text-align: center;
+        }
+        .status-pointer {
+            background: $accent-5-1 none repeat scroll 0 0;
+            position: relative;
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            margin-left: 8px;
+            margin-right: 32px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            float: left;
+            border-radius: 50%;
+            animation-name: flash;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            @include above($xsmall) {
+                margin: 10px 32px 20px 8px;
+            }
+            @include above($medium) {
+                margin: 5px;
+                margin-right: 10px;
+            }
+            @include below($xsmall) {
+                margin-right: 15px;
+            }
+            content: " ";
+            &:before {
+                background-color: $accent-5-1;
+                content: " ";
+                position: absolute;
+                top: -8px;
+                left: -8px;
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                opacity: 0.2;
+                border-radius: 50%;
+            }
+        }
+        .status-tag {
+            margin-bottom: 0px;
+            display: block;
+            @include above($medium) {
+                // text-align: center;
+            }
+            @include below($small) {
+                font-size: 1.25rem;
+            }
+        }
+    }
+    .social {
+        clear: both;
+        @include above($xsmall) {
+            width: 30%;
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+        .social__icons {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            li {
+                display: inline-block;
+                a {
+                    background-size: 30px 30px;
+                    width: 30px;
+                    height: 30px;
+                    display: block;
+                    &.social-icon--behance {
+                        background-image: url(/img/behance.svg);
+                    }
+                    &.social-icon--github {
+                        background-image: url(/img/github.svg);
+                    }
+                    &.social-icon--instagram {
+                        background-image: url(/img/instagram.svg);
+                    }
+                    &.social-icon--twitter {
+                        background-image: url(/img/twitter.svg);
+                    }
+                }
+            }
+        }
+    }
+    .goto-top {
+        padding-top: 0.5rem;
+        width: 30%;
+        display: inline-block;
+        @include below($xsmall) {
+            width: 100%;
+            text-align: center;
+        }
+        a {
+            text-transform: uppercase;
+            text-decoration: underline;
+            -webkit-text-underline-position: under;
+            -ms-text-underline-position: below;
+            text-underline-position: under;
+        }
+    }
+    .copyright-wrap {
+        @include above($xsmall) {
+            width: 70%;
+            padding-top: .9rem;
+            float: right;
+        }
+        @include below($small) {
+            padding-top: 0.5rem;
+        }
+    }
+    .copyright-wrap p {
+        font-size: .75rem;
+        text-align: center;
+        span {
+            color: $accent-1-1;
+            text-transform: upper;
+        }
+        @include above($xsmall) {
+            font-size: 1rem;
+            text-align: right;
+        }
+    }
+}

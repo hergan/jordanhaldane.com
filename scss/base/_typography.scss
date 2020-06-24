@@ -25,6 +25,10 @@ h1 {
     color: $accent-1-1;
     @include below($xsmall) {
         text-align: center;
+        font-size: 4rem;
+    }
+    @include below($tiny) {
+        font-size: 3.25rem;
     }
 }
 

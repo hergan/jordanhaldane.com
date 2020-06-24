@@ -1,0 +1,390 @@
+main {
+    height: 100%;
+    margin: 0 auto;
+    width: 300px;
+    padding-top: 1.25rem;
+    @include above($small) {
+        padding-top: 7rem;
+        width: 636px;
+    }
+    @include above($regular) {
+        padding-top: 1.25rem;
+        width: 960px;
+    }
+    section {
+        padding: 1.7rem 0;
+        padding-bottom: 3rem;
+        .h2-wrap {
+            margin-bottom: 30px;
+            h2 {}
+            @include below($xsmall) {
+                text-align: center;
+            }
+        }
+        /********Intro Sec CSS********/
+        &.intro-sec {
+            // padding-top: 1.4rem;
+            line-height: 1;
+            // padding-bottom: 6rem;
+            @include below($xsmall) {}
+            h1 {
+                text-transform: uppercase;
+                &.first-name {
+                    .last-name {
+                        display: inline-block;
+                        text-transform: uppercase;
+                        font-weight: 800;
+                        color: $grey-1;
+                    }
+                }
+            }
+            p {
+                &.small {
+                    text-transform: uppercase;
+                }
+                @include below($xsmall) {
+                    text-align: center;
+                }
+                &.about-me {
+                    line-height: normal;
+                    margin-bottom: 1rem;
+                    margin-top: 4rem;
+                }
+            }
+            .cta {
+                @include below($xsmall) {
+                    text-align: center;
+                }
+            }
+        }
+        &.what-i-do-sec {
+            //DECIDING IF I WANT THIS SECTION OR NOT
+            display: none;
+            .icon {
+                margin: 0 auto;
+                height: 75px;
+                width: 75px;
+                border: 1px solid $accent-5-1;
+                border-radius: 50%;
+                display: inline-block;
+            }
+        }
+        // PORTFOLIO GRID SECTION
+        &.grid-sec {
+            .sec__desc {
+                @include below($xsmall) {
+                    text-align: center;
+                }
+            }
+            .sec__desc {
+                margin-bottom: 20px;
+            }
+            .project__gallery {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 460px 1.25rem;
+                grid-gap: 1.25rem;
+                @include below($xsmall) {
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1fr;
+                }
+                @include between($xsmall, $medium) {
+                    grid-template-rows: 335px 1.25rem;
+                }
+                .project {
+                    border-radius: 20px;
+                    background: $accent-1-1;
+                    box-shadow: 0 3px 8px 0 rgba(14, 15, 18, 0.30);
+                    position: relative;
+                    height: 400px;
+                    padding: 2rem 1.50rem;
+                    display: flex;
+                    align-items: flex-start;
+                    @include below($xsmall) {
+                        align-items: flex-end;
+                        padding: 1.25rem;
+                    }
+                    &__info--bottom {
+                        align-items: flex-end;
+                    }
+                    &__client {
+                        color: #ffffff;
+                        text-align: left;
+                        text-transform: uppercase;
+                        font-size: 1rem;
+                        margin-bottom: 0;
+                        @include below($xsmall) {
+                            font-size: .75rem;
+                        }
+                    }
+                    &__title {
+                        color: #ffffff;
+                        text-align: left;
+                        text-transform: none;
+                        @include below($xsmall) {
+                            font-size: 1.75rem;
+                        }
+                    }
+                    &__sq {
+                        height: 390px;
+                        @include below($xsmall) {
+                            height: 230px;
+                        }
+                        @include between($xsmall, $medium) {
+                            height: 260px;
+                        }
+                    }
+                    &__store-locator {
+                        background: url(/img/project-poi-webapp.png) no-repeat center center;
+                        background-color: #4DC0E6;
+                        background-size: 160%;
+                        background-position: top 10% left -10%;
+                        @include above($xsmall) {
+                            background-position: bottom 5% left -30%;
+                            background-size: 110%;
+                            height: 350px;
+                        }
+                        @include above($medium) {
+                            height: 470px;
+                        }
+                    }
+                    &__pumello {
+                        background: url(/img/pumello_iconic_white.svg) no-repeat center center;
+                        background-color: #D72D23;
+                        background-size: 40%;
+                        background-position: top 20% right 50%;
+                        @include above($xsmall) {
+                            background-position: top 30% right 50%;
+                        }
+                    }
+                    &__personal-branding {
+                        background: url(/img/jh_iconic-white.svg) no-repeat center center;
+                        background-color: $accent-4-2;
+                        background-position: top 20% right 50%;
+                        background-size: 65%;
+                        @include above($xsmall) {
+                            background-position: bottom 40% right 50%;
+                            background-size: 45%;
+                            grid-row: 5;
+                            grid-column: 1;
+                        }
+                    }
+                    &__b2b-site {
+                        background: url(/img/project-b2b-webapp.png) no-repeat center center;
+                        background-color: $b2bLeadgenAccent1-1;
+                        background-size: 160%;
+                        background-position: top 5% right -5%;
+                        @include above($xsmall) {
+                            background-position: top 5% right -30%;
+                            height: 350px;
+                            background-size: 110%;
+                            grid-column: 2;
+                        }
+                        @include above($medium) {
+                            height: 470px;
+                        }
+                    }
+                }
+            }
+        }
+        &.capabilities-sec {
+            .skill__cards {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                text-align: center;
+                @include below($xsmall) {
+                    grid-template-columns: 1fr;
+                }
+                .skill__card {
+                    @include below($xsmall) {
+                        margin-top: 30px;
+                        padding: 0 .5rem;
+                    }
+                    .skill__icon {
+                        font-size: 3em;
+                        .skill__title {
+                            text-transform: uppercase;
+                            background: none;
+                            margin-bottom: .5rem;
+                        }
+                    }
+                    .skill__list {
+                        color: darken($grey-1, 25%);
+                        ul {
+                            list-style: none;
+                            li {}
+                        }
+                    }
+                }
+            }
+        }
+        &.tools-skills-sec {
+            // background-color: $grey-5;
+            .tools-skills {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                @include below($xsmall) {
+                    margin: inherit;
+                    grid-template-columns: 100%;
+                }
+                .tools-sec {
+                    .tool-list {
+                        // display: grid;
+                        // grid-gap: 3rem;
+                        // grid-template-columns: 1fr 1fr;
+                        // grid-template-rows: 1fr;
+                        .tool {
+                            @include below($medium) {
+                                margin-bottom: 40px;
+                            }
+                            @include above($medium) {
+                                // margin-bottom: 50px;
+                            }
+                            h4 {
+                                @include above($medium) {
+                                    // padding-bottom: 10px;
+                                }
+                                padding-bottom: 10px;
+                            }
+                            .progress-bar-graph {
+                                .progress-bar-wrap {
+                                    position: relative;
+                                    float: left;
+                                    width: 100%;
+                                    .bar-wrap {
+                                        position: relative;
+                                        float: left;
+                                        width: 100%;
+                                        span {
+                                            background-color: $accent-1-1;
+                                            height: 2px;
+                                            width: 0px;
+                                            display: block;
+                                            float: left;
+                                            position: relative;
+                                            overflow: visible !important;
+                                            margin-bottom: 40px;
+                                            &::after {
+                                                content: "";
+                                                border: 2px solid $accent-1-1;
+                                                border-radius: 50%;
+                                                height: 15px;
+                                                position: absolute;
+                                                right: 0px;
+                                                background: $accent-4-5;
+                                                top: -6px;
+                                                width: 15px;
+                                            }
+                                            strong {
+                                                display: block;
+                                                float: left;
+                                                position: absolute;
+                                                right: 0;
+                                                top: -35px;
+                                                color: $grey-1;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .skills-sec {
+                    @include below(xsmall) {
+                        margin-bottom: 40px;
+                    }
+                    display: flex;
+                    justify-content: center;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        &.contact-sec {
+            margin-bottom: 20px;
+            @include above($medium) {
+                margin-bottom: 50px;
+            }
+            form {
+                display: none;
+            }
+            .input-wrap {
+                margin-bottom: 40px;
+                overflow: hidden;
+                position: relative;
+                input {
+                    height: 50px;
+                    width: 100%;
+                    position: relative;
+                    &:focus {
+                        outline: none;
+                    }
+                    &.input-control {
+                        background: transparent none repeat scroll 0 0;
+                        border: none;
+                        box-shadow: none;
+                        color: $grey-1;
+                        display: block;
+                        overflow: hidden;
+                        font-size: 13px;
+                        font-family: $spaceFontFamily;
+                        padding-left: 0;
+                        padding-top: 15px;
+                    }
+                }
+                textarea.input-control {
+                    height: auto;
+                    width: 100%;
+                    background: transparent none repeat scroll 0 0;
+                    border: none;
+                    box-shadow: none;
+                    color: $grey-1;
+                    display: block;
+                    overflow: hidden;
+                    font-size: 13px;
+                    font-family: $spaceFontFamily;
+                    padding-left: 0;
+                    padding-top: 15px;
+                }
+                .input-label {
+                    position: absolute;
+                    display: inline-block;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: calc(100%-1px);
+                    font-family: $spaceFontFamily;
+                    color: $grey-1;
+                    font-size: 13px;
+                    text-align: left;
+                    text-transform: uppercase;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: -1px;
+                        width: 100%;
+                        height: 100%;
+                        border-bottom: 2px solid rgba($grey-1, .5);
+                    }
+                }
+            }
+            button {
+                color: $accent-1-1;
+                @include above($small) {
+                    float: left;
+                }
+            }
+            p {
+                float: left;
+                margin-left: 20px;
+                margin-top: 5px;
+                @include below($xsmall) {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
