@@ -1,3 +1,54 @@
+a.project-nav {
+    .back-btn {
+        pointer-events: none;
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 25px 0;
+        border-radius: 80px;
+        background: $accent-1-1;
+        position: fixed;
+        line-height: 0;
+        @include below($medium) {
+            right: 25px;
+            bottom: 50px;
+            width: 50px;
+            padding: 15px 0;
+        }
+        @include above($medium) {
+            top: 50%;
+            left: 50px;
+            width: 80px;
+        }
+        &.appear {
+            pointer-events: all;
+            animation-name: project-nav;
+            animation-duration: .25s;
+            animation-fill-mode: forwards;
+        }
+        &.disappear {
+            animation-name: project-nav;
+            animation-duration: .25;
+            animation-fill-mode: backwards;
+        }
+        @keyframes project-nav {
+            from {
+                opacity: 0;
+                transform: scale(0);
+            }
+            to {
+                opacity: 1;
+                transform: scale(.8);
+            }
+        }
+        svg {
+            fill: $grey-1;
+        }
+    }
+}
+
 main.project-content {
     @include above($medium) {
         width: 1070px;
@@ -29,6 +80,7 @@ main.project-content {
                 color: $grey-1;
                 font-weight: 800;
                 margin-bottom: 20px;
+                text-align: left;
             }
         }
         .project__details {
@@ -78,14 +130,20 @@ main.project-content {
         .project__img {
             border-radius: 20px;
             background-color: $grey-1;
-            &--desktop {
+            &--tall {
                 @include above($xsmall) {
                     grid-row: 1/5;
                 }
+                @include below($xsmall) {
+                    height: 700px;
+                }
             }
-            &--mobile {
+            &--sq {
                 @include above($xsmall) {
                     grid-row: span 2;
+                }
+                @include below($xsmall) {
+                    height: 200px;
                 }
             }
         }
@@ -112,6 +170,80 @@ main.project-content {
                 color: #ffffff;
             }
         }
-        .project__gallery>.project__img {}
+        .project__gallery>.project__img {
+            &--prod-1 {
+                background: url(/img/store-locator/prod-img-1.png) no-repeat center center;
+                background-size: cover;
+                @include above($xsmall) {
+                    grid-column: 1/2;
+                    grid-row: 1/3;
+                }
+                @include below($xsmall) {
+                    height: 300px;
+                }
+            }
+            &--prod-2 {
+                background: url(/img/store-locator/prod-img-2.png) no-repeat center center;
+                background-size: cover;
+                @include above($xsmall) {
+                    grid-row: span 2;
+                }
+                @include below($xsmall) {
+                    height: 250px;
+                }
+            }
+        }
+    }
+    &.b2b-leadgen {
+        .project__intro>.project__info>h1.project__title {
+            color: $accent-2-1;
+            color: $b2bLeadgenAccent1-1;
+        }
+        .project__details>.project__tags {
+            background-color: $accent-2-1;
+            background-color: $b2bLeadgenAccent1-1;
+            h4 {
+                color: $accent-2-3;
+            }
+            p {
+                color: $accent-2-4;
+            }
+        }
+        .project__details>.btn-wrapper>.btn-client {
+            border: 1px solid $b2bLeadgenAccent1-1;
+            color: $b2bLeadgenAccent1-1;
+            &:hover {
+                background-color: $b2bLeadgenAccent1-1;
+                color: #ffffff;
+            }
+        }
+        .project__gallery>.project__img {
+            &--1 {
+                background: url(/img/b2b-leadgen/prod-img-1.png) no-repeat center center;
+                background-size: cover;
+                background-color: $b2bLeadgenAccent2-1;
+                @include above($xsmall) {
+                    grid-row: 1/6;
+                }
+            }
+            &--2 {
+                background: url(/img/b2b-leadgen/prod-img-3.png) no-repeat center center;
+                background-size: cover;
+                background-color: $b2bLeadgenAccent2-1;
+                @include above($xsmall) {
+                    grid-row: span 3;
+                }
+            }
+            &--3 {
+                background: url(/img/b2b-leadgen/prod-img-2.png) no-repeat center center;
+                background-size: cover;
+                background-color: $b2bLeadgenAccent2-1;
+                @include above($xsmall) {
+                    grid-row: span 2;
+                }
+            }
+        }
     }
 }
+
+@import "./projects/branding";
