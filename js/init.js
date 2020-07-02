@@ -1,42 +1,37 @@
-/** *************Init JS*********************
-
-    TABLE OF CONTENTS
-	---------------------------
-	1.
-************************************* **/
-
 "use strict";
-/*****Load function start*****/
+
+//TODO: CONVERT TO VANILLA JS
 
 $(window).on("scroll", function() {
     var foldShadow = $(".fold-shadow");
-    /*Fold shadow animations onscroll*/
+    // Fold shadow animations onscroll
     var scroll = $(window).scrollTop();
     if (scroll >= 10) {
         $(foldShadow).addClass("disappear");
     } else {
         $(foldShadow).removeClass("disappear");
     }
-    /*Fold shadow animation onscroll*/
-    /*Project nav shadow animations onscroll*/
+    // Project nav animations onscroll
     var projectNav = $(".back-btn");
+    // console.log(scroll);
+
+    var footer = document.querySelector('footer');
+    // var footerLocal = footer.scrollTop();
+    // 1158 store
+    // 978 pumello
+    // 1056 personal
+    // 1740 b2b
     if (scroll >= 75) {
         $(projectNav).addClass("appear");
     } else {
         $(projectNav).removeClass("appear");
     }
-    /*Project nav animation onscroll*/
 });
-// var jbh = function () {
-/*Progressbar animation start*/
+// Progress-bar animation
 var progressBar = $('.progress-bar-graph div');
-// console.log(progressBar);
-// console.log(progressBar.length);
 for (var i = 0; i < progressBar.length; i++) {
-    console.log(progressBar[i]);
     $(progressBar[i]).appear(function() {
         var percent = $(this).find('span').attr('data-width');
-        console.log(percent);
         var $endNum = parseInt($(this).find('.bar-wrap strong i').text(), 10);
         var $that = $(this);
         $(this).find('span').animate({
@@ -57,20 +52,15 @@ for (var i = 0; i < progressBar.length; i++) {
         }
     });
 }
-/*Progressbar animation end*/
 
-$('.pull-tab').click(function() {
-    $('nav').toggleClass('nav--open', 500);
-    // $(this).toggleClass('pull-tab--open');
-})
+// mobile nav animation and ui
+const nav = document.querySelector('nav');
+const navPullTab = nav.querySelector('.pull-tab');
+const navItems = nav.querySelector('ul');
 
-// }
-$(document).on("ready", function() {
-    /*jbh function init start*/
-    // jbh();
-    /*jbh function init end*/
+function handleNavClick() {
+    nav.classList.toggle('nav--open');
+}
 
-    /*Preload anim start*/
-    $('#la_anim').addClass('la-animate');
-    /*Preload anim end*/
-});
+navPullTab.addEventListener('click', handleNavClick, false);
+navItems.addEventListener('click', handleNavClick, false);
