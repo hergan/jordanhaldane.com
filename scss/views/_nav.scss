@@ -11,21 +11,12 @@ nav {
         top: 40px;
         width: 40vw;
         padding: 30px;
-        transform: translateX(100%);
         background: $grey-1;
         border-radius: 10px;
-        transition: transform 500ms;
+        @include transform(translateX(100%));
+        @include transition(all 0.3s ease-in);
         &.nav--open {
-            transform: translateX(5%);
-            & ul,
-            .btn-wrapper {
-                opacity: 1;
-            }
-        }
-        & ul,
-        .btn-wrapper {
-            transition: opacity 250ms;
-            opacity: 0;
+            @include transform(translateX(5%));
         }
     }
     @include below($small) {

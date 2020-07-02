@@ -212,6 +212,7 @@ main {
                         color: darken($grey-1, 25%);
                         ul {
                             list-style: none;
+                            line-height: 1.5;
                             li {}
                         }
                     }
@@ -303,7 +304,7 @@ main {
             }
         }
         &.contact-sec {
-            margin-bottom: 20px;
+            margin-bottom: 2.75rem;
             @include above($medium) {
                 margin-bottom: 50px;
             }
@@ -381,8 +382,10 @@ main {
                 float: left;
                 margin-left: 20px;
                 margin-top: 5px;
-                @include below($xsmall) {
+                @include below($small) {
                     margin-left: 0;
+                    text-align: center;
+                    line-height: 1.75;
                 }
             }
         }
