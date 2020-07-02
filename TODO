@@ -1,30 +1,49 @@
-
 ✅ Todo:
-  ✔ update alt tags @done(20-06-23 23:33)
-  ☐ Add linkedIn social icon. replace w/ behance?
-  ☐ project pages
-    ☐ implement image lightbox for images
+  ☐ Have copy proofed
+    ✔ Rewrite store locator breif. More like B2B breif @done(20-07-02 12:49)
+  ✔ Add primary back btn nav for project pages @done(20-07-01 19:06)
+  ☐ clean styles/ template files
+    ☐ weird section overides?
+    ☐ home.scss
+    ☐ projects.scss
+  ☐ add project pages
     ☐ ZNL
     ☐ impact health
     ☐ ETN
-  ☐ clean styles/ breakout files
-    ☐ home.scss
-    ☐ projects.scss
+  ☐ Build contact form (might require react)
+  ☐ scss var => css vars
+  ☐ have indicator on desktop nav for current section
+  ☐ Template html layout (react or js framework?)
 
 🐛 Bugs:
+  ☐ @high JS error nav is null on project pages
+  ☐ add class to project back btn to not overlap footer
   ☐ nav doesn't look great on mobile landscape.
-  ☐ frame rounded edges doesn't look great on mobile safari
   ☐ footer bgc takes away gradient bg border-radius
+  ☐ frame rounded edges doesn't look great on mobile safari
 
 💡Ideas:
-  ☐ layout templating
-  ☐ add corner curves to body frame
-    ☐ See bug #3
-  ☐ have indicator on nav for current section.
+  ☐ icons for capabilities skills
+  ☐ Personal about page
+  ☐ Make lightbox images bigger for project images
+    ☐ better good grocery screen
+  ☐ animate skills chart
+  ☐ animate sections
+  ☐ Make role/tools tags clickable/ sortable on project pages
+  ☐ add corner curves to body frame (see bugs)
+  ☐ dark light toggle for branding page (might need css vars first)
+  ☐ custom project page footer
   ☐ move index to src folder
   ☐ make site frame 1.1 to 1.2 gradient (will have to inline logo bg svg)
 
 Archive:
+  ✔ @critical Css animation isn't working on webkit (ios) browsers (see freelance status symbol) @done(20-06-28 13:59) @project(🐛 Bugs)
+  ✔ Hide mobile nav after selecting link. @done(20-06-27 18:09) @project(✅ Todo)
+  ✔ Add linkedIn social icon. replace w/ behance? @done(20-06-28 12:24) @project(✅ Todo)
+  ✔ resume btn broken! @started(20-06-26 17:47) @done(20-06-27 12:03) @lasted(18h16m30s) @project(🐛 Bugs)
+  ✔ pumello logo breaks content on mobile @done(20-06-27 18:31) @project(🐛 Bugs)
+  ✔ update alt tags @done(20-06-23 23:33) @project(✅ Todo)
+  ✔ implement image lightbox for images @done(20-06-26 17:35) @project(✅ Todo)
   ✔ layout/style @done(20-06-23 23:18) @project(✅ Todo)
   ✔ pumello @done(20-06-23 23:18) @project(✅ Todo)
   ✔ personal @done(20-06-23 23:18) @project(✅ Todo)
