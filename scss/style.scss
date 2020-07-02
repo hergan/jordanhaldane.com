@@ -6,16 +6,10 @@ TABLE OF CONTENTS
 -------------------------------------------------------------------*/
 
 
-/****************************/
-
-
-/** Imports **/
-
-
-/****************************/
+/** VENDOR **/
 
 @import "vendor/**/*";
-// @import 'vendor/superlatief-mediaqueries/scss/mediaqueries';
+@import "lity.min.css";
 @import "utilities/reset";
 @import "mixins/mixins";
 @import "base/colors";

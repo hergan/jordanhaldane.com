@@ -1,3 +1,13 @@
+.project-nav--tab-back {
+    .pull-tab {
+        display: block;
+        position: absolute;
+        top: 4rem;
+        right: 20px;
+        pointer-events: all;
+    }
+}
+
 a.project-nav {
     .back-btn {
         pointer-events: none;
@@ -6,42 +16,27 @@ a.project-nav {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 25px 0;
-        border-radius: 80px;
+        padding: 1.6rem;
+        border-radius: 6rem;
         background: $accent-1-1;
         position: fixed;
         line-height: 0;
-        @include below($medium) {
-            right: 25px;
-            bottom: 50px;
-            width: 50px;
-            padding: 15px 0;
-        }
+        right: 25px;
+        bottom: 50px;
+        @include transition(transform 0.25s ease-in, opacity 0.25s ease-in);
+        @include transform(scale(0));
         @include above($medium) {
+            width: 90px;
+            padding: 1.6rem 0;
             top: 50%;
+            bottom: unset;
+            right: unset;
             left: 50px;
-            width: 80px;
         }
         &.appear {
             pointer-events: all;
-            animation-name: project-nav;
-            animation-duration: .25s;
-            animation-fill-mode: forwards;
-        }
-        &.disappear {
-            animation-name: project-nav;
-            animation-duration: .25;
-            animation-fill-mode: backwards;
-        }
-        @keyframes project-nav {
-            from {
-                opacity: 0;
-                transform: scale(0);
-            }
-            to {
-                opacity: 1;
-                transform: scale(.8);
-            }
+            @include transform(scale(.6));
+            opacity: 1;
         }
         svg {
             fill: $grey-1;
@@ -227,7 +222,7 @@ main.project-content {
                 }
             }
             &--2 {
-                background: url(/img/b2b-leadgen/prod-img-3.png) no-repeat center center;
+                background: url(/img/b2b-leadgen/prod-img-2.png) no-repeat center center;
                 background-size: cover;
                 background-color: $b2bLeadgenAccent2-1;
                 @include above($xsmall) {
@@ -235,7 +230,7 @@ main.project-content {
                 }
             }
             &--3 {
-                background: url(/img/b2b-leadgen/prod-img-2.png) no-repeat center center;
+                background: url(/img/b2b-leadgen/prod-img-3.png) no-repeat center center;
                 background-size: cover;
                 background-color: $b2bLeadgenAccent2-1;
                 @include above($xsmall) {

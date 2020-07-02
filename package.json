@@ -14,7 +14,8 @@
   "dependencies": {
     "cssnano": "^4.1.10",
     "gulp-sass": "^4.0.2",
-    "gulp-sass-glob": "^1.1.0"
+    "gulp-sass-glob": "^1.1.0",
+    "lity": "^2.4.1"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
