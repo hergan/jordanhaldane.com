@@ -1,0 +1,28 @@
+body {
+    font-family: $defaultFontFamily;
+    background-image: linear-gradient(180deg, $accent-4-5 0%, $grey-5 40%, $grey-5 100%);
+    // background-image: linear-gradient(179deg, #0C0D27 0%, #0D0F0F 39%, #0D0F0F 100%);
+    .frame {
+        background: $grey-1;
+        position: fixed;
+        z-index: 999;
+        &.top {
+            height: 20px;
+            width: 100%;
+        }
+        &.right {
+            right: 0;
+            width: 20px;
+            height: 100vh;
+        }
+        &.bottom {
+            bottom: 0;
+            height: 20px;
+            width: 100%;
+        }
+        &.left {
+            width: 20px;
+            height: 100vh;
+        }
+    }
+}

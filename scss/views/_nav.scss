@@ -1,0 +1,81 @@
+nav {
+    z-index: 999;
+    position: fixed;
+    @include above($medium) {
+        background: transparent;
+        left: 20px;
+        top: 150px;
+    }
+    @include below($medium) {
+        right: 20px;
+        top: 40px;
+        width: 40vw;
+        padding: 30px;
+        background: $grey-1;
+        border-radius: 10px;
+        @include transform(translateX(100%));
+        @include transition(all 0.3s ease-in);
+        &.nav--open {
+            @include transform(translateX(5%));
+        }
+    }
+    @include below($small) {
+        width: 50vw;
+    }
+    ul {
+        list-style: none;
+        @include below($medium) {
+            padding: 0;
+        }
+        li {
+            text-align: center;
+            @include below($small) {
+                border-bottom: 1px solid rgb(173, 173, 173);
+                &:first-child {
+                    border-top: 1px solid rgb(173, 173, 173);
+                }
+            }
+            @include above($medium) {
+                border-bottom: none;
+                writing-mode: tb-rl;
+                display: flex;
+                line-height: 1.5;
+            }
+            a {
+                @include below($medium) {
+                    padding: 20px 0;
+                    display: block;
+                }
+                @include above($medium) {
+                    padding: 1rem 1.7rem;
+                    white-space: nowrap;
+                    @include transform(rotate(180deg));
+                }
+            }
+        }
+    }
+    .btn-wrapper {
+        display: flex;
+        justify-content: center;
+        padding: 0 10px;
+        .btn {
+            @include above($medium) {
+                display: none;
+            }
+            margin-top: 30px;
+            padding: 10px 15px;
+        }
+    }
+    .pull-tab {
+        position: fixed;
+        top: 70px;
+        right: 20px;
+        display: none;
+        @include below($medium) {
+            display: block;
+            top: .5rem;
+            left: -25px;
+            cursor: pointer;
+        }
+    }
+}

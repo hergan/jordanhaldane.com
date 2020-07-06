@@ -4,3 +4,4 @@ package-lock.json
 .DS_Store
 .vscode/settings.json
 .vscode/launch.json
+.vscode/sass.code-snippets

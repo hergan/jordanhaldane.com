@@ -1,0 +1,54 @@
+/****************************/
+
+
+/** Buttons **/
+
+
+/****************************/
+
+a.btn,
+button.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 18px;
+    line-height: 1.5;
+    letter-spacing: .1rem;
+    text-align: center;
+    font-size: .75rem;
+    text-transform: uppercase;
+    // font-family: $spaceFontFamily;
+    &.btn-primary {
+        background-color: $accent-1-1;
+        border: 1px solid $accent-1-1;
+        color: $grey-1;
+        &.btn--gradient {
+            border: none;
+            background-image: linear-gradient(144deg, $accent-1-1 1%, $accent-1-2 100%);
+        }
+        &.btn--outline {
+            background-color: transparent;
+            border: 1px solid $accent-1-1;
+            color: $accent-1-1;
+        }
+    }
+    &.btn-secondary {
+        &.btn--transparent {
+            background-color: transparent;
+            border: none;
+            color: $accent-1-1;
+        }
+    }
+    &:hover {
+        color: $accent-5-1;
+        background-color: $accent-4-5;
+        border: 1px solid $accent-5-1;
+    }
+    &.btn-primary {
+        &.btn-outline {
+            background-color: transparent;
+            &:hover {
+                border: 1px solid $accent-5-1;
+            }
+        }
+    }
+}

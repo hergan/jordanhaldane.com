@@ -1,0 +1,51 @@
+@mixin transition($transition...) {
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    -webkit-transition: $transition;
+    transition: $transition;
+}
+
+@mixin transform($transforms...) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+
+@mixin transform-origin ($transform-origin...) {
+    -moz-transform-origin: $transform-origin;
+    -o-transform-origin: $transform-origin;
+    -ms-transform-origin: $transform-origin;
+    -webkit-transform-origin: $transform-origin;
+    transform-origin: $transform-origin;
+}
+
+@mixin animation-name ($animation-name...) {
+    animation-name: $animation-name;
+    -webkit-animation-name: $animation-name;
+}
+
+@mixin animation-duration ($animation-duration...) {
+    animation-duration: $animation-duration;
+    -webkit-animation-duration: $animation-duration;
+}
+
+@mixin animation-iteration-count ($animation-iteration-count...) {
+    animation-iteration-count: $animation-iteration-count;
+    -webkit-animation-iteration-count: $animation-iteration-count;
+}
+
+// Custom paragraph rule below (used for h2)
+@mixin p-rule--below($font-color:$accent-1-1, $p-rule-color:$accent-5-1) {
+    display: inline;
+    padding: 0 .75rem;
+    color: $font-color;
+    background: linear-gradient($p-rule-color, $p-rule-color);
+    background-size: 1.25px 1.25px;
+    background-repeat: repeat-x;
+    background-position: 0 99%;
+    @include above($small) {
+        padding-left: 0;
+    }
+}
