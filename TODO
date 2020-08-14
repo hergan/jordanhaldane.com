@@ -1,11 +1,12 @@
 ✅ Todo:
   ☐ Have copy proofed
-    ✔ Rewrite store locator breif. More like B2B breif @done(20-07-02 12:49)
-  ✔ Add primary back btn nav for project pages @done(20-07-01 19:06)
+  ☐ update favicon
   ☐ clean styles/ template files
     ☐ weird section overides?
     ☐ home.scss
     ☐ projects.scss
+  ☐ make freelance status a link to contact in project page footer
+  ☐ make handcrafted copy a link to site repo
   ☐ add project pages
     ☐ ZNL
     ☐ impact health
@@ -37,6 +38,8 @@
   ☐ make site frame 1.1 to 1.2 gradient (will have to inline logo bg svg)
 
 Archive:
+  ✔ Rewrite store locator breif. More like B2B breif @done(20-07-02 12:49) @project(✅ Todo)
+  ✔ Add primary back btn nav for project pages @done(20-07-01 19:06) @project(✅ Todo)
   ✔ @critical Css animation isn't working on webkit (ios) browsers (see freelance status symbol) @done(20-06-28 13:59) @project(🐛 Bugs)
   ✔ Hide mobile nav after selecting link. @done(20-06-27 18:09) @project(✅ Todo)
   ✔ Add linkedIn social icon. replace w/ behance? @done(20-06-28 12:24) @project(✅ Todo)
