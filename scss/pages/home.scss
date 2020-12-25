@@ -7,7 +7,7 @@ main {
         padding-top: 7rem;
         width: 636px;
     }
-    @include above($regular) {
+    @include above($large) {
         padding-top: 1.25rem;
         width: 960px;
     }
