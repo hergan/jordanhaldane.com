@@ -186,6 +186,11 @@ main {
                     }
                 }
             }
+            .btn-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-top:1.25rem;
+            }
         }
         &.capabilities-sec {
             .skill__cards {
