@@ -5,3 +5,4 @@ package-lock.json
 .vscode/settings.json
 .vscode/launch.json
 .vscode/sass.code-snippets
+workspace.code-workspace
